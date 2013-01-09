@@ -1,0 +1,397 @@
+/ Starting slide
+#start.step{'data-x' => '-10000', 'data-y' => '-10000', 'data-scale' => 1}
+  %p.as-logo AppSignal
+  %p [uitnodigingssysteem?]
+  %p [demos?]
+
+/ Intro me!
+#about-me.step{'data-x' => '-10000', 'data-y' => '-9200', 'data-scale' => 1}
+  %p
+    %strong Afstudeerproject AppSignal
+  %p
+    Presentatie door
+    %a{href: 'http://tomdebruijn.com'} Tom de Bruijn
+  %p
+    %small Studentnummer: 1554598
+  %br/
+  %p
+    %small 
+      Presentatie powered by:
+      %a{href: 'https://github.com/bartaz/impress.js'} impress.js
+
+/ Intro 80beans and school
+#companies.step{'data-x' => '-10000', 'data-y' => '-9200', 'data-rotate-x' => -90, 'data-scale' => 1}
+  %p.hu-logo Hogeschool Utrecht
+  %small.hu-names
+    %strong Joop Kaldeway
+  %p.beans-logo 80beans
+  %small.beans-thijs
+    %strong Thijs Cadier
+  %p.center
+    %small.beans-names
+      Roy Tomeij, Ron Cadier, Robert Beekman
+      %br/
+      Steven Weller, Jacob Vosmaer en Geurt Sengers
+  %ul.employees
+    %li
+      .thijs-photo
+    %li
+      .roy-photo
+    %li
+      .ron-photo
+    %li
+      .robert-photo
+    %li
+      .steven-photo
+    %li
+      .jacob-photo
+    %li
+      .geurt-photo
+
+/ What is AppSignal?
+#as-process-overview.step{'data-x' => '-10150', 'data-y' => '-7900', 'data-scale' => '2'}
+  %p Wat is AppSignal?
+
+#as-process-visitors.step{'data-x' => '-10900', 'data-y' => '-8050', 'data-scale' => 1}
+  %p
+    %img{src: 'https://raw.github.com/arvida/emoji-cheat-sheet.com/master/public/graphics/emojis/busts_in_silhouette.png'}
+    Bezoekers
+
+#as-process-client.step{'data-x' => '-10500', 'data-y' => '-8010', 'data-scale' => 1}
+  .arrow
+    .arrow-horizontal-line
+    .arrow-head-right
+  .arrow-content
+    %p
+      %img{src: 'https://raw.github.com/arvida/emoji-cheat-sheet.com/master/public/graphics/emojis/globe_with_meridians.png'}
+      Website
+    %p
+      %small
+        %img.client-icon{src: 'https://raw.github.com/arvida/emoji-cheat-sheet.com/master/public/graphics/emojis/bust_in_silhouette.png'}
+        Klant (van AppSignal)
+
+#as-process-gem.step{'data-x' => '-10100', 'data-y' => '-8025', 'data-scale' => 1}
+  .arrow
+    .arrow-horizontal-line
+    .arrow-head-right
+  .arrow-content
+    .ruby-logo.left Ruby
+    %div AppSignal gem
+    %small (geinstalleerd op de website)
+
+#as-process-server.step{'data-x' => '-9500', 'data-y' => '-8010', 'data-scale' => 1}
+  .arrow
+    .arrow-horizontal-line
+    .arrow-head-right
+  .arrow-content
+    .as-logo.left AppSignal server
+    %small Snelheidsberekening en foutanalyse
+
+#as-process-email.step{'data-x' => '-9500', 'data-y' => '-7860', 'data-scale' => 1}
+  .arrow
+    .arrow-head-left
+    .arrow-horizontal-line
+  .arrow-content
+    %p
+      %img{src: 'https://raw.github.com/arvida/emoji-cheat-sheet.com/master/public/graphics/emojis/envelope.png'}
+      E-mail
+      %small (indien iets fout is)
+
+#as-process-client-overview.step{'data-x' => '-10500', 'data-y' => '-8010', 'data-scale' => 1}
+
+/ With what was this all made?
+#technologies.step{'data-x' => '-11000', 'data-y' => '-6700', 'data-rotate-x' => -50, 'data-scale' => '2'}
+  %p.center
+    %strong Wat zit er onder de motorkap?
+  %br/
+  %p.right
+    (Ruby) gems
+  %p.left 
+    .ruby-logo.left Ruby
+    Ruby
+  %br/
+  .mongodb-logo.right MongoDB
+  .rails-logo.left Ruby on Rails
+  %br{clear: 'both'}/
+  %p.center
+    %em en meer...
+
+/ Using what methods was this all made?
+#methods.step{'data-x' => '-9000', 'data-y' => '-6700', 'data-rotate-x' => -50, 'data-scale' => '2'}
+  %strong Methodes
+  %ul.list
+    %li Agile -
+    %li
+      Lean - software development
+      %br/
+      %br/
+    %li Behavior driven-development (BDD)
+
+/ Project scope
+.step{'data-x' => '-10000', 'data-y' => '-5200', 'data-scale' => '2'}
+  .as-logo
+  %strong.center Project-scope
+
+.step.block{'data-x' => '-10600', 'data-y' => '-4770', 'data-scale' => 1}
+  %strong.center Gebruikerssysteem
+  %hr/
+  %ul.list
+    %li Authenticatiesysteem
+    %li Permissiesysteem
+    %li Uitnodigingssysteem
+
+.step.block.center{'data-x' => '-10000', 'data-y' => '-4900', 'data-scale' => 1}
+  %strong Github-integratie
+
+.step.block.center{'data-x' => '-9400', 'data-y' => '-4900', 'data-scale' => 1}
+  %strong * Extra *
+
+/ Auth system
+#auth1.step{'data-x '=> -12000, 'data-y' => -3500, 'data-scale' => 1}
+  .step-content
+    %strong Authenticatiesysteem
+    %ul.list
+      %li Login
+      %li Registratie
+      %li Profiel wijzigen
+      %li ‛Wachtwoord vergeten’
+    %br/
+    %p.center
+      %em Is geen volledig permissiesysteem!
+  .white.block
+    %iframe{src: "images/authsystem.svg", alt: "Authenticatiesysteem"}
+
+/ With what was it made?
+#auth3.step{'data-x' => -12800, 'data-y' => -3500, 'data-scale' => 1}
+  %p
+    .ruby-logo.right Ruby
+    %strong Ruby gems
+  %ul.list
+    %li
+      %u devise
+    %li AuthLogic
+  %small
+    %em beide open-source en modulair
+  %br/
+  %br/
+  %p of eigen implementatie?
+
+/ It also support Github authentication
+#github-auth1.step{'data-x' => -12000, 'data-y' => -2200, 'data-scale' => 1}
+  .white.block.right
+    .github-logo Github
+  %p
+    %strong Github authenticatie
+  %ul.list
+    %li Communicatie met Github
+    %li OAuth2
+    %li devise-module
+    %li
+      Implementatie communicatie
+      %br/
+      devise-module met AppSignal
+
+/ Auth image with Github!
+#github-auth2.step{'data-x' => -12000, 'data-y' => -2200, 'data-z' => -400, 'data-rotate-y' => 180, 'data-scale' => 1}
+  .white.block
+    %iframe{src: "images/authsystem-with-github.svg", alt: "Authenticatiesysteem"}
+
+/ [Stop! Demo time]
+#demo-auth.step.center{'data-x' => -12000, 'data-y' => -2200, 'data-scale' => 1}
+  %strong Stop!
+  %a{href: 'http://localhost:3000/'} Demo time!
+
+/ Yep, that's what makes it a permissionsystem
+#perm1.step{'data-x' => -12000, 'data-y' => -1000, 'data-scale' => 1}
+  %em.center
+    Het authenticatiesysteem geeft toegang
+    %br/
+    %small (tot alles)
+  %hr/
+  %em.center
+    Het permissiesysteem schermt data af
+
+/ What did I made out of it?
+#perm2.step{'data-x' => -12000, 'data-y' => -500, 'data-scale' => 1}
+  %strong Permissiesysteem
+
+  %ul.list
+    %li Permissiemodel
+    %li Gecentraliseerde opslag permissies
+    %li Permissies gebaseerd op teams
+    %li CanCan gem
+
+  %br/
+
+  .white.block.left
+    %img{src: "images/permissionsystem-version1.jpg", alt: "Permissiesysteem versie 1"}
+    .center
+      %small Versie 1
+  .white.block.right
+    %img{src: "images/permissionsystem-version2.jpg", alt: "Permissiesysteem versie 2"}
+    .center
+      %small Versie 2
+
+/ The non-poweruser method that allows for permission management
+#perm3.step{'data-x' => -12000, 'data-y' => -1100, 'data-z' => 1000, 'data-rotate-x' => 75, 'data-scale' => 1}
+  %p
+    %strong EveryoneTeam
+  .arrow
+    .arrow-horizontal-line
+    .arrow-head-right
+  .arrow-content
+    %p
+      Gebruik teams is managerniveau
+  .arrow
+    .arrow-horizontal-line
+    .arrow-head-right
+  .arrow-content
+    %p
+      Niet alle gebruiker zijn managers
+      %br/
+      %small
+        %em (Freelancers, bedrijven van ongeveer tien medewerkers)
+  %br/
+  %p.center
+    EveryoneTeam automatiseert
+    %br/
+    simpele permissies
+
+/ [Stop! Demo time?]
+#demo-permissions.step.center{'data-x' => -12000, 'data-y' => -2200, 'data-scale' => 1}
+  %strong Stop!
+  %a{href: 'http://localhost:3000/'} Demo time?
+
+/ What to do for Github integration?
+#github1.step{'data-x' => -10000, 'data-y' => -3500, 'data-scale' => 1}
+  %strong Github-integratie
+  .white.block.right
+    %img{src: '/images/inspectocat.jpg', alt: 'Github inspectocat octocat', style: 'width: 200px; height: 200px;' }
+  %p Onderzoek:
+  %ul.list
+    %li Github API
+    %li mogelijkheden
+
+/ Github intregration will include..
+#github2.step{'data-x' => -9200, 'data-y' => -3500, 'data-scale' => 1}
+  .white.block.right
+    %img{src: '/images/collabocats.jpg', alt: 'Github collabocats octocat', style: 'width: 300px; height: 300px;' }
+  %strong Nu:
+  %ul.list
+    %li Site-link
+
+  %br/
+
+  %strong Toekomst:
+  %ul.list
+    %li
+      %div Code links
+      %small
+        %em Op Github of binnen AppSignal website
+    %li
+      %div Code vergelijking
+      %small
+        %em Op Github of binnen AppSignal website
+    %li
+      %div Teams import
+      %small
+        %em Permissiesysteem
+    %li
+      %div Github issues aanmaken
+      %small
+        %em Issue met alle bijbehorende data (die AppSignal heeft)
+
+/ Planning? Hah!
+#planning.step{'data-x' => -7000, 'data-y' => -3500, 'data-rotate-x' => -90, 'data-rotate-y' => -90, 'data-scale' => 1}
+  %em.center Projecten lopen (bijna) altijd anders
+  %hr/
+  %em.center Tijd besteed aan andere onderdelen
+  %em.center dan vermeldt in Plan van Aanpak
+
+/ I did extra stuff you know ~_~
+#extra1.step{'data-x' => -7000, 'data-y' => -3500, 'data-z' => 35, 'data-scale' => 1}
+  %p
+    %strong * Extra *
+
+  %br/
+
+  %p AppSignal Ruby gem
+  %ul.list
+    %li Push API key validatie
+    %li
+      .rails-logo Ruby on Rails
+      installatiegenerator
+
+/ One does not simply test JavaScript
+#js-testing1.step{'data-x' => -7000, 'data-y' => -2000, 'data-scale' => 2}
+  %strong.center JavaScript-testing
+  %br/
+  %p.center
+    JavaScript wordt veelal niet automatisch getest
+  %small.center
+    %em (is ook niet makkelijk)
+
+/ What did we accomplish?
+#js-testing2.step{'data-x' => -7000, 'data-y' => -1500, 'data-z' => -2000, 'data-rotate' => -90, 'data-scale' => 1}
+  %p
+    %strong Onderzoek naar test-setup
+  .div
+    %small
+      In samenwerking met
+      .jacob-photo
+      Jacob Vosmaer
+  %br/
+
+  %p Resultaat:
+  %ul.list
+    %li
+      Nieuw concept;
+      %small ~ is nog niet perfect ~
+    %li Toekomstige opzet binnen 80beans
+  %br/
+  %small
+    Is een onderwerp voor een compleet nieuw afstudeerproject..
+
+/ [Stop! Demo time]
+#demo-konacha.step.center{'data-x' => -12000, 'data-y' => -2200, 'data-scale' => 1}
+  %strong Stop!
+  %a{href: 'http://localhost:3000/'} Demo time!
+
+/ How about I wrap this up?
+#conclusion.step{'data-x' => -15000, 'data-y' => -8000, 'data-z' => 0, 'data-scale' => 1}
+  %strong Conclusie
+  %p [Make this an image?]
+
+  %ul.list
+    %li
+      Gebruikerssysteem
+      %ul.list
+        %li Authenticatie-
+        %li Permissie-
+        %li Uitnodigings-systeem
+    %li Github-integratie
+    %li
+      [Web-API niet in afstudeerproject]
+      %small [Pas aan het einde behandeld buiten het project]
+    %li
+      Extra onderdelen
+      %ul.list
+        %li AppSignal Ruby gem
+        %li JavaScript testing
+
+/ Well thanks for hearing me ramble!
+#thanks.step.center{'data-x' => -13500, 'data-y' => -5000, 'data-z' => 1000, 'data-rotate' => 90, 'data-rotate-y' => -70, 'data-scale' => 5}
+  %p Bedankt voor het luisteren!
+
+  %p
+    %small - Tom de Bruijn -
+  %br/
+  %p Zijn er nog vragen?
+
+  %br/
+  %p
+    %small
+      %small (Op de achtergrond is nu de gehele presentatie te zien!)
+
+/ Debug overview, activate all the things!
+#debug-overview.step{'data-x' => -10000, 'data-y' => -5000, 'data-z' => 10000, 'data-scale' => 1}
