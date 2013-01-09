@@ -6,7 +6,4 @@ gem 'thin'
 gem 'rack-contrib'
 gem 'rake'
 gem 'middleman', '~>3.0.7'
-
-group :development do
-  gem 'middleman-livereload'
-end
+gem 'middleman-livereload'

@@ -197,9 +197,10 @@
     %iframe{src: "images/authsystem-with-github.svg", alt: "Authenticatiesysteem"}
 
 / [Stop! Demo time]
-#demo-auth.step.center{'data-x' => -12000, 'data-y' => -2200, 'data-scale' => 1}
+#demo-auth.step.center{'data-x' => -13000, 'data-y' => -2200, 'data-scale' => 1}
   %strong Stop!
-  %a{href: 'http://localhost:3000/'} Demo time!
+  %a{href: 'http://localhost:3000/users/sign_in'} Demo time!
+  %p [Make movie backup/alternative?]
 
 / Yep, that's what makes it a permissionsystem
 #perm1.step{'data-x' => -12000, 'data-y' => -1000, 'data-scale' => 1}
@@ -258,9 +259,14 @@
     simpele permissies
 
 / [Stop! Demo time?]
-#demo-permissions.step.center{'data-x' => -12000, 'data-y' => -2200, 'data-scale' => 1}
-  %strong Stop!
-  %a{href: 'http://localhost:3000/'} Demo time?
+#demo-permissions.step.center{'data-x' => -13000, 'data-y' => 1000, 'data-scale' => 1}
+  %p
+    %strong Stop!
+    Demo time!
+  %p
+    %small (Browser switch)
+  %p
+    [Make movie backup/alternative?]
 
 / What to do for Github integration?
 #github1.step{'data-x' => -10000, 'data-y' => -3500, 'data-scale' => 1}
@@ -332,7 +338,7 @@
     %em (is ook niet makkelijk)
 
 / What did we accomplish?
-#js-testing2.step{'data-x' => -7000, 'data-y' => -1500, 'data-z' => -2000, 'data-rotate' => -90, 'data-scale' => 1}
+#js-testing2.step{'data-x' => -7800, 'data-y' => -2000, 'data-rotate-y' => -90, 'data-rotate' => 90, 'data-scale' => 1}
   %p
     %strong Onderzoek naar test-setup
   .div
@@ -353,14 +359,16 @@
     Is een onderwerp voor een compleet nieuw afstudeerproject..
 
 / [Stop! Demo time]
-#demo-konacha.step.center{'data-x' => -12000, 'data-y' => -2200, 'data-scale' => 1}
+#demo-konacha.step.center{'data-x' => -7000, 'data-y' => -1700, 'data-z' => 2000, 'data-rotate-x' => 20, 'data-scale' => 2}
   %strong Stop!
-  %a{href: 'http://localhost:3000/'} Demo time!
+  / Address is Konacha local server
+  %a{href: 'http://localhost:3500/'} Demo time!
+  %p [Make image/movie backup/alternative?]
 
 / How about I wrap this up?
 #conclusion.step{'data-x' => -15000, 'data-y' => -8000, 'data-z' => 0, 'data-scale' => 1}
   %strong Conclusie
-  %p [Make this an image?]
+  %p [Make this an image/figure of the entire AppSignal system with my work highlighted?]
 
   %ul.list
     %li
@@ -390,8 +398,11 @@
 
   %br/
   %p
+    %small (Op de achtergrond is nu de gehele presentatie te zien!)
+  %p
     %small
-      %small (Op de achtergrond is nu de gehele presentatie te zien!)
+      De broncode van de presentatie is te vinden op
+      %a{href: 'https://github.com/Newanz/appsignal-presentation'} Github
 
 / Debug overview, activate all the things!
 #debug-overview.step{'data-x' => -10000, 'data-y' => -5000, 'data-z' => 10000, 'data-scale' => 1}

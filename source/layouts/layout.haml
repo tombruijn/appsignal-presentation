@@ -1,22 +1,22 @@
 !!!
 %html
   %head
-    %meta{charset: "utf-8"}
+    %meta{charset: 'utf-8'}
     
-    %meta{content: "IE=edge,chrome=1", 'http-equiv' => "X-UA-Compatible"}
+    %meta{content: 'IE=edge,chrome=1', 'http-equiv' => 'X-UA-Compatible'}
     
     %title AppSignal presentation - Tom de Bruijn
     
-    = stylesheet_link_tag "impress"
-    =# javascript_include_tag "all"
+    = stylesheet_link_tag 'impress'
+    =# javascript_include_tag 'all'
 
-    %meta{name: "viewport", content: "width=1024"}
-    %meta{name: "apple-mobile-web-app-capable", content: "yes"}
+    %meta{name: 'viewport', content: 'width=1024'}
+    %meta{name: 'apple-mobile-web-app-capable', content: 'yes'}
 
-    %link{href: "http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic", rel: "stylesheet"}
+    %link{href: 'http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic', rel: 'stylesheet'}
 
-    %link{rel: "shortcut icon", href: "favicon.png"}
-    %link{rel: "apple-touch-icon", href: "apple-touch-icon.png"}
+    %link{rel: 'shortcut icon', href: 'favicon.png'}
+    %link{rel: 'apple-touch-icon', href: 'apple-touch-icon.png'}
   
   %body{class: page_classes}
     .fallback-message
@@ -29,10 +29,10 @@
     .hint
       %p Use a spacebar or arrow keys to navigate
     :javascript
-      if ("ontouchstart" in document.documentElement) { 
-          document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+      if ('ontouchstart' in document.documentElement) { 
+          document.querySelector('.hint').innerHTML = '<p>Tap on the left or right to navigate</p>';
       }
 
-    <script src="javascripts/impress.js"></script>
+    %script{src: 'javascripts/impress.js'}
     :javascript
       impress().init();
