@@ -1,8 +1,6 @@
 / Starting slide
 #start.step{'data-x' => '-10000', 'data-y' => '-10000', 'data-scale' => 1}
   %p.as-logo AppSignal
-  %p [uitnodigingssysteem?]
-  %p [demos?]
 
 / Intro me!
 #about-me.step{'data-x' => '-10000', 'data-y' => '-9200', 'data-scale' => 1}
@@ -128,11 +126,14 @@
     %li Behavior driven-development (BDD)
 
 / Project scope
-.step{'data-x' => '-10000', 'data-y' => '-5200', 'data-scale' => '2'}
+#scope.step{'data-x' => '-10000', 'data-y' => '-5200', 'data-scale' => '2'}
   .as-logo
-  %strong.center Project-scope
+  .project-scope-title
+    %strong.center Project-scope
+  .conclusion-title
+    %strong.center Conclusie
 
-.step.block{'data-x' => '-10600', 'data-y' => '-4770', 'data-scale' => 1}
+#scope-usersystem.step.block{'data-x' => '-10600', 'data-y' => '-4770', 'data-scale' => 1}
   %strong.center Gebruikerssysteem
   %hr/
   %ul.list
@@ -140,15 +141,16 @@
     %li Permissiesysteem
     %li Uitnodigingssysteem
 
-.step.block.center{'data-x' => '-10000', 'data-y' => '-4900', 'data-scale' => 1}
+#scope-github.step.block.center{'data-x' => '-10000', 'data-y' => '-4900', 'data-scale' => 1}
   %strong Github-integratie
 
-.step.block.center{'data-x' => '-9400', 'data-y' => '-4900', 'data-scale' => 1}
+#scope-extra.step.block.center{'data-x' => '-9400', 'data-y' => '-4900', 'data-scale' => 1}
   %strong * Extra *
 
 / Auth system
 #auth1.step{'data-x '=> -12000, 'data-y' => -3500, 'data-scale' => 1}
   .step-content
+    %p.center5 Gebruikerssysteem
     %strong Authenticatiesysteem
     %ul.list
       %li Login
@@ -268,6 +270,11 @@
   %p
     [Make movie backup/alternative?]
 
+/ [Invitationsystem?]
+
+/ Back to the scope
+#github-overview.step{'data-x' => -10000, 'data-y' => -5000, 'data-z' => 400, 'data-scale' => 1}
+
 / What to do for Github integration?
 #github1.step{'data-x' => -10000, 'data-y' => -3500, 'data-scale' => 1}
   %strong Github-integratie
@@ -306,6 +313,9 @@
       %div Github issues aanmaken
       %small
         %em Issue met alle bijbehorende data (die AppSignal heeft)
+
+/ Back to the scope
+#scope-extra#extra-overview.step{'data-x' => -10000, 'data-y' => -5000, 'data-z' => 400, 'data-scale' => 1}
 
 / Planning? Hah!
 #planning.step{'data-x' => -7000, 'data-y' => -3500, 'data-rotate-x' => -90, 'data-rotate-y' => -90, 'data-scale' => 1}
@@ -358,8 +368,10 @@
   %small
     Is een onderwerp voor een compleet nieuw afstudeerproject..
 
+/ [Web API?]
+
 / [Stop! Demo time]
-#demo-konacha.step.center{'data-x' => -7000, 'data-y' => -1700, 'data-z' => 2000, 'data-rotate-x' => 20, 'data-scale' => 2}
+#demo-konacha.step.center{'data-x' => -7000, 'data-y' => -1600, 'data-z' => 2000, 'data-rotate-x' => 20, 'data-scale' => 2}
   %strong Stop!
   / Address is Konacha local server
   %a{href: 'http://localhost:3500/'} Demo time!
@@ -376,16 +388,18 @@
       %ul.list
         %li Authenticatie-
         %li Permissie-
-        %li Uitnodigings-systeem
+        %li Uitnodigings-systeem [niet behandeld]
     %li Github-integratie
     %li
-      [Web-API niet in afstudeerproject]
+      %p [Web-API niet in afstudeerproject]
       %small [Pas aan het einde behandeld buiten het project]
     %li
       Extra onderdelen
       %ul.list
         %li AppSignal Ruby gem
         %li JavaScript testing
+
+#conclusion-overview.step{'data-x' => -10000, 'data-y' => -5000, 'data-scale' => 2}
 
 / Well thanks for hearing me ramble!
 #thanks.step.center{'data-x' => -13500, 'data-y' => -5000, 'data-z' => 1000, 'data-rotate' => 90, 'data-rotate-y' => -70, 'data-scale' => 5}
