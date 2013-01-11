@@ -485,6 +485,7 @@ a:focus {
 #github-auth1,
 #github-auth2,
 #perm2,
+#perm3,
 #extra1 {
   opacity: 0;
   &.active {
@@ -507,6 +508,7 @@ a:focus {
 #perm1,
 #perm2,
 #perm3,
+#perm4,
 #invite1,
 #planning,
 #js-testing2,
@@ -594,6 +596,18 @@ a:focus {
     left: 50px;
     width: 720px;
     font-size: 70%;
+    text-align: center;
+  }
+}
+
+#scope-usersystem {
+  .scope-subsystems .block {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    margin-top: 20px;
+    font-size: 80%;
+    width: 90%;
     text-align: center;
   }
 }

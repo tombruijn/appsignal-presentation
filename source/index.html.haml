@@ -123,12 +123,16 @@
 #methods.step{'data-x' => '-9000', 'data-y' => '-6700', 'data-rotate-x' => -50, 'data-scale' => '2'}
   %strong Methodes
   %ul.list
-    %li Agile -
     %li
-      Lean - software development
+      %p Agile -
+      %small voortschrijdend inzicht
+    %li
+      %p Lean - software development
+      %small Klein beginnen / concept versie
       %br/
-      %br/
-    %li Behavior driven-development (BDD)
+    %li
+      %p Behavior driven-development (BDD)
+      %small Tests eerst, daarna code
 
 / Project scope
 / Doubles as the conclusion slide
@@ -142,13 +146,14 @@
 
   .scope-website.white.block Website
 
-#scope-usersystem.step.block{'data-x' => '-10400', 'data-y' => '-4700', 'data-scale' => 1}
-  %strong.center Gebruikerssysteem
-  %hr/
-  %ul.list
-    %li Authenticatiesysteem
-    %li Permissiesysteem
-    %li Uitnodigingssysteem
+#scope-usersystem.step{'data-x' => '-10400', 'data-y' => '-4690', 'data-scale' => 1}
+  .white.block
+    %strong.center Gebruikerssysteem
+  
+  .scope-subsystems
+    .white.block Authenticatiesysteem
+    .white.block Permissiesysteem
+    .white.block Uitnodigingssysteem
 
 #scope-github.step.block.center{'data-x' => '-9600', 'data-y' => '-4840', 'data-scale' => 1}
   %strong Github-integratie
@@ -231,7 +236,6 @@
     %li Permissiemodel
     %li Gecentraliseerde opslag permissies
     %li Permissies gebaseerd op teams
-    %li CanCan gem
 
   %br/
 
@@ -244,12 +248,8 @@
     .center
       %small Versie 2
 
-/ [Add CanCan slide]
-/ Architecture
-/ and sequence diagram
-
 / The non-poweruser method that allows for permission management
-#perm3.step{'data-x' => -12000, 'data-y' => -1100, 'data-z' => 1000, 'data-rotate-x' => 75, 'data-scale' => 1}
+#perm3.step{'data-x' => -12000, 'data-y' => 100, 'data-scale' => 1}
   %p
     %strong EveryoneTeam
   .arrow
@@ -272,6 +272,19 @@
     EveryoneTeam automatiseert
     %br/
     simpele permissies
+
+#perm4.step{'data-x' => -12000, 'data-y' => -1100, 'data-z' => 1000, 'data-rotate-x' => 75, 'data-scale' => 1}
+  %strong CanCan gem
+  %img.block.right{src: '/images/cancan-structure.jpg'}
+
+  %ul.list
+    %li
+      %p Ability bestand
+      %small Gecentraliseerde opslag permissies
+    %li
+      Autorisatiecontrole op controller-niveau
+
+  %img.block.right{src: '/images/cancan-sequence.jpg'}
 
 / [Stop! Demo time?]
 #demo-permissions.step.center{'data-x' => -13000, 'data-y' => 1000, 'data-scale' => 1}
