@@ -1,3 +1,5 @@
+/ [Images to local repo]
+
 / Starting slide
 #start.step{'data-x' => '-10000', 'data-y' => '-10000', 'data-scale' => 1}
   %p.as-logo AppSignal
@@ -27,9 +29,11 @@
     %strong Thijs Cadier
   %p.center
     %small.beans-names
-      Roy Tomeij, Ron Cadier, Robert Beekman
+      Roy Tomeij, Ron Cadier, Robert Beekman,
       %br/
-      Steven Weller, Jacob Vosmaer en Geurt Sengers
+      Steven Weller, Jacob Vosmaer,
+      %br/
+      Geurt Sengers en Hetty de Vries
   %ul.employees
     %li
       .thijs-photo
@@ -115,6 +119,7 @@
     %em en meer...
 
 / Using what methods was this all made?
+/ [Keep?]
 #methods.step{'data-x' => '-9000', 'data-y' => '-6700', 'data-rotate-x' => -50, 'data-scale' => '2'}
   %strong Methodes
   %ul.list
@@ -126,6 +131,8 @@
     %li Behavior driven-development (BDD)
 
 / Project scope
+/ Doubles as the conclusion slide
+/ [Nadruk op website]
 #scope.step{'data-x' => '-10000', 'data-y' => '-5200', 'data-scale' => '2'}
   .as-logo
   .project-scope-title
@@ -133,7 +140,9 @@
   .conclusion-title
     %strong.center Conclusie
 
-#scope-usersystem.step.block{'data-x' => '-10600', 'data-y' => '-4770', 'data-scale' => 1}
+  .scope-website.white.block Website
+
+#scope-usersystem.step.block{'data-x' => '-10400', 'data-y' => '-4700', 'data-scale' => 1}
   %strong.center Gebruikerssysteem
   %hr/
   %ul.list
@@ -141,11 +150,11 @@
     %li Permissiesysteem
     %li Uitnodigingssysteem
 
-#scope-github.step.block.center{'data-x' => '-10000', 'data-y' => '-4900', 'data-scale' => 1}
+#scope-github.step.block.center{'data-x' => '-9600', 'data-y' => '-4840', 'data-scale' => 1}
   %strong Github-integratie
 
-#scope-extra.step.block.center{'data-x' => '-9400', 'data-y' => '-4900', 'data-scale' => 1}
-  %strong * Extra *
+/ #scope-extra.step.block.center{'data-x' => '-9400', 'data-y' => '-4900', 'data-scale' => 1}
+/   %strong * Extra *
 
 / Auth system
 #auth1.step{'data-x '=> -12000, 'data-y' => -3500, 'data-scale' => 1}
@@ -235,6 +244,10 @@
     .center
       %small Versie 2
 
+/ [Add CanCan slide]
+/ Architecture
+/ and sequence diagram
+
 / The non-poweruser method that allows for permission management
 #perm3.step{'data-x' => -12000, 'data-y' => -1100, 'data-z' => 1000, 'data-rotate-x' => 75, 'data-scale' => 1}
   %p
@@ -270,10 +283,28 @@
   %p
     [Make movie backup/alternative?]
 
-/ [Invitationsystem?]
+/ [Invitationsystem!]
+#invite1.step{'data-x' => -10000, 'data-y' => -2000, 'data-scale' => 1}
+  %strong Uitnodigingssysteem
+  / [Plaatje met structuur van invite1?]
+  / [Plaatje met flow?]
+  %ul.list
+    %li
+      %p
+        Toevoegen personen
+        %small aan het systeem
+      %small (Medewerkers, klanten, etc.)
+    %li Via e-mail
+    %li
+      %p Koppeling permissiesysteem
+      %small Direct koppelen van teams
+    %li
+      %ul.list
+        %li Privacy
+        %li Ontkoppeling
 
 / Back to the scope
-#github-overview.step{'data-x' => -10000, 'data-y' => -5000, 'data-z' => 400, 'data-scale' => 1}
+#github-overview.step{'data-x' => -9600, 'data-y' => -4900, 'data-z' => 400, 'data-scale' => 1}
 
 / What to do for Github integration?
 #github1.step{'data-x' => -10000, 'data-y' => -3500, 'data-scale' => 1}
@@ -315,7 +346,8 @@
         %em Issue met alle bijbehorende data (die AppSignal heeft)
 
 / Back to the scope
-#scope-extra#extra-overview.step{'data-x' => -10000, 'data-y' => -5000, 'data-z' => 400, 'data-scale' => 1}
+/ [No *extra* slides]
+/ #scope-extra#extra-overview.step{'data-x' => -9800, 'data-y' => -5000, 'data-z' => 400, 'data-scale' => 1}
 
 / Planning? Hah!
 #planning.step{'data-x' => -7000, 'data-y' => -3500, 'data-rotate-x' => -90, 'data-rotate-y' => -90, 'data-scale' => 1}
@@ -323,83 +355,76 @@
   %hr/
   %em.center Tijd besteed aan andere onderdelen
   %em.center dan vermeldt in Plan van Aanpak
+  / [Vermelden web api en wijzigingen planning?]
 
 / I did extra stuff you know ~_~
-#extra1.step{'data-x' => -7000, 'data-y' => -3500, 'data-z' => 35, 'data-scale' => 1}
-  %p
-    %strong * Extra *
+/ / [They don't want to hear it, maybe a small mention of the web API?]
+/ #extra1.step{'data-x' => -7000, 'data-y' => -3500, 'data-z' => 35, 'data-scale' => 1}
+/   %p
+/     %strong * Extra *
 
-  %br/
+/   %br/
 
-  %p AppSignal Ruby gem
-  %ul.list
-    %li Push API key validatie
-    %li
-      .rails-logo Ruby on Rails
-      installatiegenerator
+/   %p AppSignal Ruby gem
+/   %ul.list
+/     %li Push API key validatie
+/     %li
+/       .rails-logo Ruby on Rails
+/       installatiegenerator
 
-/ One does not simply test JavaScript
-#js-testing1.step{'data-x' => -7000, 'data-y' => -2000, 'data-scale' => 2}
-  %strong.center JavaScript-testing
-  %br/
-  %p.center
-    JavaScript wordt veelal niet automatisch getest
-  %small.center
-    %em (is ook niet makkelijk)
+/ / One does not simply test JavaScript
+/ #js-testing1.step{'data-x' => -7000, 'data-y' => -2000, 'data-scale' => 2}
+/   %strong.center JavaScript-testing
+/   %br/
+/   %p.center
+/     JavaScript wordt veelal niet automatisch getest
+/   %small.center
+/     %em (is ook niet makkelijk)
 
-/ What did we accomplish?
-#js-testing2.step{'data-x' => -7800, 'data-y' => -2000, 'data-rotate-y' => -90, 'data-rotate' => 90, 'data-scale' => 1}
-  %p
-    %strong Onderzoek naar test-setup
-  .div
-    %small
-      In samenwerking met
-      .jacob-photo
-      Jacob Vosmaer
-  %br/
+/ / What did we accomplish?
+/ #js-testing2.step{'data-x' => -7800, 'data-y' => -2000, 'data-rotate-y' => -90, 'data-rotate' => 90, 'data-scale' => 1}
+/   %p
+/     %strong Onderzoek naar test-setup
+/   .div
+/     %small
+/       In samenwerking met
+/       .jacob-photo
+/       Jacob Vosmaer
+/   %br/
 
-  %p Resultaat:
-  %ul.list
-    %li
-      Nieuw concept;
-      %small ~ is nog niet perfect ~
-    %li Toekomstige opzet binnen 80beans
-  %br/
-  %small
-    Is een onderwerp voor een compleet nieuw afstudeerproject..
+/   %p Resultaat:
+/   %ul.list
+/     %li
+/       Nieuw concept;
+/       %small ~ is nog niet perfect ~
+/     %li Toekomstige opzet binnen 80beans
+/   %br/
+/   %small
+/     Is een onderwerp voor een compleet nieuw afstudeerproject..
+
+/ / [Stop! Demo time]
+/ #demo-konacha.step.center{'data-x' => -7000, 'data-y' => -1600, 'data-z' => 2000, 'data-rotate-x' => 20, 'data-scale' => 2}
+/   %strong Stop!
+/   / Address is Konacha local server
+/   %a{href: 'http://localhost:3500/'} Demo time!
+/   %p [Make image/movie backup/alternative?]
 
 / [Web API?]
 
-/ [Stop! Demo time]
-#demo-konacha.step.center{'data-x' => -7000, 'data-y' => -1600, 'data-z' => 2000, 'data-rotate-x' => 20, 'data-scale' => 2}
-  %strong Stop!
-  / Address is Konacha local server
-  %a{href: 'http://localhost:3500/'} Demo time!
-  %p [Make image/movie backup/alternative?]
+/ Wrapping up
+#conclusion-overview.step{'data-x' => -10000, 'data-y' => -4900, 'data-scale' => 2}
+  .notes.note-usersystem
+    %ul.list
+      %li Veilig
+      %li [Punt 2]
+  .notes.note-github Basis voor de toekomst
+  .notes.note-extra
+    %ul.list
+      %li AppSignal gem
+      %li JavaScript testing
 
-/ How about I wrap this up?
-#conclusion.step{'data-x' => -15000, 'data-y' => -8000, 'data-z' => 0, 'data-scale' => 1}
-  %strong Conclusie
-  %p [Make this an image/figure of the entire AppSignal system with my work highlighted?]
-
-  %ul.list
-    %li
-      Gebruikerssysteem
-      %ul.list
-        %li Authenticatie-
-        %li Permissie-
-        %li Uitnodigings-systeem [niet behandeld]
-    %li Github-integratie
-    %li
-      %p [Web-API niet in afstudeerproject]
-      %small [Pas aan het einde behandeld buiten het project]
-    %li
-      Extra onderdelen
-      %ul.list
-        %li AppSignal Ruby gem
-        %li JavaScript testing
-
-#conclusion-overview.step{'data-x' => -10000, 'data-y' => -5000, 'data-scale' => 2}
+/ Evaluatie
+/ Aanbevelingen
 
 / Well thanks for hearing me ramble!
 #thanks.step.center{'data-x' => -13500, 'data-y' => -5000, 'data-z' => 1000, 'data-rotate' => 90, 'data-rotate-y' => -70, 'data-scale' => 5}
@@ -420,3 +445,26 @@
 
 / Debug overview, activate all the things!
 #debug-overview.step{'data-x' => -10000, 'data-y' => -5000, 'data-z' => 10000, 'data-scale' => 1}
+
+/ How about I wrap this up?
+/ #conclusion.step{'data-x' => -15000, 'data-y' => -8000, 'data-z' => 0, 'data-scale' => 1}
+/   %strong Conclusie
+/   %p [Make this an image/figure of the entire AppSignal system with my work highlighted?]
+
+/   %ul.list
+/     %li
+/       Gebruikerssysteem
+/       %ul.list
+/         %li Authenticatie-
+/         %li Permissie-
+/         %li Uitnodigings-systeem [niet behandeld]
+/     %li Github-integratie
+/     %li
+/       %p [Web-API niet in afstudeerproject]
+/       %small [Pas aan het einde behandeld buiten het project]
+/     %li
+/       Extra onderdelen
+/       %ul.list
+/         %li AppSignal Ruby gem
+/         %li JavaScript testing
+
