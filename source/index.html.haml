@@ -54,22 +54,24 @@
 #as-process-overview.step{'data-x' => '-10150', 'data-y' => '-7900', 'data-scale' => '2'}
   %p Wat is AppSignal?
 
-#as-process-visitors.step{'data-x' => '-10900', 'data-y' => '-8050', 'data-scale' => 1}
+#as-process-visitors.step{'data-x' => '-10900', 'data-y' => '-8030', 'data-scale' => 1}
   %p
-    %img{src: 'https://raw.github.com/arvida/emoji-cheat-sheet.com/master/public/graphics/emojis/busts_in_silhouette.png'}
-    Bezoekers
+    %p
+      %img{src: '/images/busts_in_silhouette.png'}
+      Bezoekers
+    %small Website/Webapplicatie
 
 #as-process-client.step{'data-x' => '-10500', 'data-y' => '-8010', 'data-scale' => 1}
   .arrow
     .arrow-horizontal-line
     .arrow-head-right
   .arrow-content
-    %p
-      %img{src: 'https://raw.github.com/arvida/emoji-cheat-sheet.com/master/public/graphics/emojis/globe_with_meridians.png'}
+    %p.process-website
+      %img{src: '/images/globe_with_meridians.png'}
       Website
-    %p
+    %p.process-client
       %small
-        %img.client-icon{src: 'https://raw.github.com/arvida/emoji-cheat-sheet.com/master/public/graphics/emojis/bust_in_silhouette.png'}
+        %img.client-icon{src: '/images/bust_in_silhouette.png'}
         Klant (van AppSignal)
 
 #as-process-gem.step{'data-x' => '-10100', 'data-y' => '-8025', 'data-scale' => 1}
@@ -87,7 +89,9 @@
     .arrow-head-right
   .arrow-content
     .as-logo.left AppSignal server
-    %small Snelheidsberekening en foutanalyse
+    %small (Website)
+    %p
+      %small Berekeningen en foutanalyse
 
 #as-process-email.step{'data-x' => '-9500', 'data-y' => '-7860', 'data-scale' => 1}
   .arrow
@@ -95,7 +99,7 @@
     .arrow-horizontal-line
   .arrow-content
     %p
-      %img{src: 'https://raw.github.com/arvida/emoji-cheat-sheet.com/master/public/graphics/emojis/envelope.png'}
+      %img{src: '/images/envelope.png'}
       E-mail
       %small (indien iets fout is)
 
@@ -123,12 +127,13 @@
 #methods.step{'data-x' => '-9000', 'data-y' => '-6700', 'data-rotate-x' => -50, 'data-scale' => '2'}
   %strong Methodes
   %ul.list
-    %li
+    %li5
       %p Agile -
       %small voortschrijdend inzicht
     %li
       %p Lean - software development
-      %small Klein beginnen / concept versie
+      %p
+        %small Klein beginnen / concept versie
       %br/
     %li
       %p Behavior driven-development (BDD)

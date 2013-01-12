@@ -264,10 +264,13 @@ a:focus {
 .impress-on-gs-overview .step,
 .impress-on-overview .step,
 .impress-on-debug-overview .step {
-    opacity: 1;
-    cursor: pointer;
+  opacity: 1;
+  cursor: pointer;
 }
-
+.impress-on-as-process-client-overview #as-process-client.step .process-website {
+  opacity: .5;
+  cursor: pointer;
+}
 
 /*
     Now, when we have all the steps styled let's give users a hint how to navigate
@@ -739,7 +742,7 @@ a:focus {
 .hu-logo {
   width: 250px;
   height: 59px;
-  @include replace-text('http://www.hu.nl/~/media/HU-GLOBAL/hu-logos/HU_blauw_rood.ashx');
+  @include replace-text('/images/HU_blauw_rood.png');
   background-repeat: no-repeat;
 }
 #companies {
