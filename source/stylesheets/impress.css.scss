@@ -485,11 +485,7 @@ a:focus {
 
 /* Slides that are not visible before it's their turn */
 
-#github-auth1,
-#github-auth2,
-#perm2,
-#perm3,
-#extra1 {
+.step.hide-until-turn {
   opacity: 0;
   &.active {
     opacity: 1;
