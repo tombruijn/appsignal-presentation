@@ -5,7 +5,7 @@
   %p.as-logo AppSignal
 
 / Intro me!
-#about-me.step{data_attr(x: -10000, y: -9200)}
+#about-me.step.big-slide{data_attr(x: -10000, y: -9200)}
   %p
     %strong Afstudeerproject AppSignal
   %p
@@ -151,13 +151,13 @@
   .scope-website.white.block Website
 
 #scope-usersystem.step{data_attr(x: -10400, y: -4690)}
-  .white.block
+  .white.block.usersystem
     %strong.center Gebruikerssysteem
   
   .scope-subsystems
-    .white.block Authenticatiesysteem
-    .white.block Permissiesysteem
-    .white.block Uitnodigingssysteem
+    .white.block.authsystem Authenticatiesysteem
+    .white.block.permsystem Permissiesysteem
+    .white.block.invisystem Uitnodigingssysteem
 
 #scope-github.step.block.center{data_attr(x: -9600, y: -4840)}
   %strong Github-integratie
@@ -181,6 +181,7 @@
       %em Is geen volledig permissiesysteem!
   .white.block
     %iframe{src: "images/authsystem.svg", alt: "Authenticatiesysteem"}
+    %small.right= link_to 'Open', 'images/authsystem.svg', 'target' => '_blank'
 
 / With what was it made?
 #auth3.step{data_attr(x: -12800, y: -3500)}
@@ -202,25 +203,32 @@
   .white.block.right
     .github-logo Github
   %p
-    %strong Github authenticatie
+    %strong Github-authenticatie
   %ul.list
-    %li Communicatie met Github
-    %li OAuth2
-    %li devise-module
     %li
-      Implementatie communicatie
-      %br/
-      devise-module met AppSignal
+      Github-API
+      %small communicatie met Github
+      %ul.list
+        %li
+          OAuth2
+          %small -protocol
+    %li
+      devise-module
+      %small Omniauthable
+    %li
+      %p Implementatie devise-module
+      %small met AppSignal
 
 / Auth image with Github!
 #github-auth2.step.hide-until-turn{data_attr(x: -12000, y: -2200, z: -400, 'rotate-y' => 180)}
   .white.block
     %iframe{src: "images/authsystem-with-github.svg", alt: "Authenticatiesysteem"}
+    %small.right= link_to 'Open', 'images/authsystem-with-github.svg', 'target' => '_blank'
 
 / [Stop! Demo time]
 #demo-auth.step.center{data_attr(x: -13000, y: -2200)}
   %strong Stop!
-  %a{href: 'http://localhost:3000/users/sign_in'} Demo time!
+  %a{href: 'http://localhost:3000/users/sign_in', target: :_blank} Demo time!
   %p [Make movie backup/alternative?]
 
 / Yep, that's what makes it a permissionsystem
@@ -245,11 +253,13 @@
   %br/
 
   .white.block.left
-    %img{src: "images/permissionsystem-version1.jpg", alt: "Permissiesysteem versie 1"}
+    = link_to '/images/permissionsystem-version1.jpg', 'target' => '_blank' do
+      %img{src: "images/permissionsystem-version1.jpg", alt: "Permissiesysteem versie 1"}
     .center
       %small Versie 1
   .white.block.right
-    %img{src: "images/permissionsystem-version2.jpg", alt: "Permissiesysteem versie 2"}
+    = link_to '/images/permissionsystem-version2.jpg', 'target' => '_blank' do
+      %img{src: "images/permissionsystem-version2.jpg", alt: "Permissiesysteem versie 2"}
     .center
       %small Versie 2
 
@@ -277,19 +287,22 @@
     EveryoneTeam automatiseert
     %br/
     simpele permissies
+  / [Sequence diagrams to show the difference in calling members between a normal team and everyoneteam?]
 
 #perm4.step{data_attr(x: -12000, y: -1100, z: 1000, 'rotate-x' => 75)}
+  = link_to '/images/cancan-structure.jpg', 'target' => '_blank' do
+    %img.block.right{src: '/images/cancan-structure.jpg'}
   %strong CanCan gem
-  %img.block.right{src: '/images/cancan-structure.jpg'}
 
   %ul.list
     %li
-      %p Ability bestand
+      %p Ability-model
       %small Gecentraliseerde opslag permissies
     %li
       Autorisatiecontrole op controller-niveau
-
-  %img.block.right{src: '/images/cancan-sequence.jpg'}
+  %br/
+  = link_to '/images/cancan-sequence.jpg', 'target' => '_blank' do
+    %img.block.right{src: '/images/cancan-sequence.jpg'}
 
 / [Stop! Demo time?]
 #demo-permissions.step.center{data_attr(x: -13000, y: 1000)}
@@ -328,7 +341,7 @@
 #github1.step{data_attr(x: -10000, y: -3500)}
   %strong Github-integratie
   .white.block.right
-    %img{src: '/images/inspectocat.jpg', alt: 'Github inspectocat octocat', style: 'width: 200px; height: 200px;' }
+    %img.github-inspectocat{src: '/images/inspectocat.jpg', alt: 'Github inspectocat octocat'}
   %p Onderzoek:
   %ul.list
     %li Github API
@@ -337,7 +350,7 @@
 / Github intregration will include..
 #github2.step{data_attr(x: -9200, y: -3500)}
   .white.block.right
-    %img{src: '/images/collabocats.jpg', alt: 'Github collabocats octocat', style: 'width: 300px; height: 300px;' }
+    %img.github-collabocats{src: '/images/collabocats.jpg', alt: 'Github collabocats octocat'}
   %strong Nu:
   %ul.list
     %li Site-link
@@ -370,6 +383,7 @@
 / Planning? Hah!
 #planning.step{data_attr(x: -7000, y: -3500, 'rotate-x' => -90, 'rotate-y' => -90)}
   %em.center Projecten lopen (bijna) altijd anders
+  %small.center Web-API en Github-integratie
   %hr/
   %em.center Tijd besteed aan andere onderdelen
   %em.center dan vermeldt in Plan van Aanpak
@@ -430,19 +444,23 @@
 / [Web API?]
 
 / Wrapping up
+/ [Better keywords for subsystems]
 #conclusion-overview.step{data_attr(x: -10000, y: -4900, scale: 2)}
-  .notes.note-usersystem
-    %ul.list
-      %li Veilig
-      %li [Punt 2]
-  .notes.note-github Basis voor de toekomst
-  .notes.note-extra
-    %ul.list
-      %li AppSignal gem
-      %li JavaScript testing
+  .notes.note-authsystem
+    Sessiebeheer
+  .notes.note-permsystem
+    Beveiliging
+  .notes.note-invisystem
+    Delen
+  .notes.note-github
+    Basis voor de toekomst
+  / .notes.note-extra
+  /   %ul.list
+  /     %li AppSignal gem
+  /     %li JavaScript testing
 
-/ Evaluatie
-/ Aanbevelingen
+/ [Evaluatie]
+/ [Aanbevelingen]
 
 / Well thanks for hearing me ramble!
 #thanks.step.center{data_attr(x: -13500, y: -5000, z: 1000, rotate: 90, 'rotate-y' => -70, scale: 5)}

@@ -199,6 +199,9 @@ a:focus {
   ul.list {
     margin: 0 0 0 40px;
     list-style: disc;
+    ul.list {
+      list-style: square;
+    }
   }
 }
 
@@ -484,7 +487,6 @@ a:focus {
 }
 
 /* Slides that are not visible before it's their turn */
-
 .step.hide-until-turn {
   opacity: 0;
   &.active {
@@ -600,14 +602,28 @@ a:focus {
 }
 
 #scope-usersystem {
-  .scope-subsystems .block {
-    position: relative;
-    top: 20px;
-    left: 20px;
-    margin-top: 20px;
-    font-size: 80%;
-    width: 90%;
-    text-align: center;
+  .usersystem {
+    width: 600px;
+  }
+  .scope-subsystems {
+    .block {
+      position: relative;
+      top: 20px;
+      left: 80px;
+      margin-top: 20px;
+      font-size: 80%;
+      width: 400px;
+      text-align: center;
+    }
+  }
+}
+.impress-on-thanks #scope-usersystem.step,
+.impress-on-conclusion-overview #scope-usersystem.step .scope-subsystems {
+  .permsystem {
+    top: 120px;
+  }
+  .invisystem {
+    top: 220px;
   }
 }
 
@@ -641,20 +657,21 @@ a:focus {
   .notes {
     position: relative;
     font-size: 60%;
-    width: 400px
+    width: 400px;
+    left: -110px;
   }
-  .note-usersystem {
+  .note-authsystem {
+    top: 200px;
+  }
+  .note-permsystem {
     top: 260px;
-    left: -140px;
+  }
+  .note-invisystem {
+    top: 310px;
   }
   .note-github {
-    top: 40px;
-    left: 254px;
-  }
-  .note-extra {
-    display: none;
     top: 10px;
-    left: 370px;
+    left: 254px;
   }
 }
 
@@ -677,7 +694,7 @@ a:focus {
   width: 950px;
   .block {
     position: relative;
-    top: -150px;
+    top: -60px;
   }
 }
 #github-auth2 iframe {
@@ -691,6 +708,15 @@ a:focus {
   .right img {
     width: 350px;
   }
+}
+
+.github-collabocats {
+  width: 450px;
+  height: 240px;
+}
+.github-inspectocat {
+  width: 200px;
+  height: 200px;
 }
 
 /*
