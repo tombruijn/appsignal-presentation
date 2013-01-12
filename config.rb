@@ -55,6 +55,14 @@ set :images_dir, 'images'
 
 activate :livereload
 
+helpers do
+  def data_attr(options = {})
+    result = {}
+    options.each { |k,v| result["data-#{k}"] = v }
+    result
+  end
+end
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment

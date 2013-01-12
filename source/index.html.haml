@@ -1,12 +1,11 @@
 / [Images to local repo]
 
 / Starting slide
-#start.step{'data-x' => -10000, 'data-y' => -10000}
+#start.step{data_attr(x: -10000, y: -10000)}
   %p.as-logo AppSignal
-  = data_attr(x: -10000, y: -10000).inspect
 
 / Intro me!
-#about-me.step{'data-x' => -10000, 'data-y' => -9200}
+#about-me.step{data_attr(x: -10000, y: -9200)}
   %p
     %strong Afstudeerproject AppSignal
   %p
@@ -21,7 +20,7 @@
       %a{href: 'https://github.com/bartaz/impress.js'} impress.js
 
 / Intro 80beans and school
-#companies.step{'data-x' => -10000, 'data-y' => -9200, 'data-rotate-x' => -90}
+#companies.step{data_attr(x: -10000, y: -9200, 'rotate-x' => -90)}
   %p.hu-logo Hogeschool Utrecht
   %small.hu-names
     %strong Joop Kaldeway
@@ -52,17 +51,17 @@
       .geurt-photo
 
 / What is AppSignal?
-#as-process-overview.step{'data-x' => -10150, 'data-y' => -7900, 'data-scale' => 2}
+#as-process-overview.step{data_attr(x: -10150, y: -7900, scale: 2)}
   %p Wat is AppSignal?
 
-#as-process-visitors.step{'data-x' => -10900, 'data-y' => -8030}
+#as-process-visitors.step{data_attr(x: -10900, y: -8030)}
   %p
     %p
       %img{src: '/images/busts_in_silhouette.png'}
       Bezoekers
     %small Website/Webapplicatie
 
-#as-process-client.step{'data-x' => -10500, 'data-y' => -8010}
+#as-process-client.step{data_attr(x: -10500, y: -8010)}
   .arrow
     .arrow-horizontal-line
     .arrow-head-right
@@ -75,7 +74,7 @@
         %img.client-icon{src: '/images/bust_in_silhouette.png'}
         Klant (van AppSignal)
 
-#as-process-gem.step{'data-x' => -10100, 'data-y' => -8025}
+#as-process-gem.step{data_attr(x: -10100, y: -8025)}
   .arrow
     .arrow-horizontal-line
     .arrow-head-right
@@ -84,7 +83,7 @@
     %div AppSignal gem
     %small (geinstalleerd op de website)
 
-#as-process-server.step{'data-x' => -9500, 'data-y' => -8010}
+#as-process-server.step{data_attr(x: -9500, y: -8010)}
   .arrow
     .arrow-horizontal-line
     .arrow-head-right
@@ -94,7 +93,7 @@
     %p
       %small Berekeningen en foutanalyse
 
-#as-process-email.step{'data-x' => -9500, 'data-y' => -7860}
+#as-process-email.step{data_attr(x: -9500, y: -7860)}
   .arrow
     .arrow-head-left
     .arrow-horizontal-line
@@ -104,10 +103,10 @@
       E-mail
       %small (indien iets fout is)
 
-#as-process-client-overview.step{'data-x' => -10500, 'data-y' => -8010}
+#as-process-client-overview.step{data_attr(x: -10500, y: -8010)}
 
 / With what was this all made?
-#technologies.step{'data-x' => -11000, 'data-y' => -6700, 'data-rotate-x' => -50, 'data-scale' => 2}
+#technologies.step{data_attr(x: -11000, y: -6700, 'rotate-x' => -50, scale: 2)}
   %p.center
     %strong Wat zit er onder de motorkap?
   %br/
@@ -125,7 +124,7 @@
 
 / Using what methods was this all made?
 / [Keep?]
-#methods.step{'data-x' => -9000, 'data-y' => -6700, 'data-rotate-x' => -50, 'data-scale' => 2}
+#methods.step{data_attr(x: -9000, y: -6700, 'rotate-x' => -50, scale: 2)}
   %strong Methodes
   %ul.list
     %li5
@@ -142,7 +141,7 @@
 
 / Project scope
 / Doubles as the conclusion slide
-#scope.step{'data-x' => -10000, 'data-y' => -5200, 'data-scale' => 2}
+#scope.step{data_attr(x: -10000, y: -5200, scale: 2)}
   .as-logo
   .project-scope-title
     %strong.center Project-scope
@@ -151,7 +150,7 @@
 
   .scope-website.white.block Website
 
-#scope-usersystem.step{'data-x' => -10400, 'data-y' => -4690}
+#scope-usersystem.step{data_attr(x: -10400, y: -4690)}
   .white.block
     %strong.center Gebruikerssysteem
   
@@ -160,15 +159,15 @@
     .white.block Permissiesysteem
     .white.block Uitnodigingssysteem
 
-#scope-github.step.block.center{'data-x' => -9600, 'data-y' => -4840}
+#scope-github.step.block.center{data_attr(x: -9600, y: -4840)}
   %strong Github-integratie
 
 / [Removed because they (school) didn't want to see it]
-/ #scope-extra.step.block.center{'data-x' => '-9400', 'data-y' => '-4900'}
+/ #scope-extra.step.block.center{data_attr(x: '-9400', y: '-4900')}
 /   %strong * Extra *
 
 / Auth system
-#auth1.step{'data-x '=> -12000, 'data-y' => -3500}
+#auth1.step{data_attr(x: -12000, y: -3500)}
   .step-content
     %p.center5 Gebruikerssysteem
     %strong Authenticatiesysteem
@@ -184,7 +183,7 @@
     %iframe{src: "images/authsystem.svg", alt: "Authenticatiesysteem"}
 
 / With what was it made?
-#auth3.step{'data-x' => -12800, 'data-y' => -3500}
+#auth3.step{data_attr(x: -12800, y: -3500)}
   %p
     .ruby-logo.right Ruby
     %strong Ruby gems
@@ -199,7 +198,7 @@
   %p of eigen implementatie?
 
 / It also support Github authentication
-#github-auth1.step{'data-x' => -12000, 'data-y' => -2200}
+#github-auth1.step{data_attr(x: -12000, y: -2200)}
   .white.block.right
     .github-logo Github
   %p
@@ -214,18 +213,18 @@
       devise-module met AppSignal
 
 / Auth image with Github!
-#github-auth2.step.hide-until-turn{'data-x' => -12000, 'data-y' => -2200, 'data-z' => -400, 'data-rotate-y' => 180}
+#github-auth2.step.hide-until-turn{data_attr(x: -12000, y: -2200, z: -400, 'rotate-y' => 180)}
   .white.block
     %iframe{src: "images/authsystem-with-github.svg", alt: "Authenticatiesysteem"}
 
 / [Stop! Demo time]
-#demo-auth.step.center{'data-x' => -13000, 'data-y' => -2200}
+#demo-auth.step.center{data_attr(x: -13000, y: -2200)}
   %strong Stop!
   %a{href: 'http://localhost:3000/users/sign_in'} Demo time!
   %p [Make movie backup/alternative?]
 
 / Yep, that's what makes it a permissionsystem
-#perm1.step{'data-x' => -12000, 'data-y' => -1000}
+#perm1.step{data_attr(x: -12000, y: -1000)}
   %em.center
     Het authenticatiesysteem geeft toegang
     %br/
@@ -235,7 +234,7 @@
     Het permissiesysteem schermt data af
 
 / What did I made out of it?
-#perm2.step.hide-until-turn{'data-x' => -12000, 'data-y' => -500}
+#perm2.step.hide-until-turn{data_attr(x: -12000, y: -500)}
   %strong Permissiesysteem
 
   %ul.list
@@ -255,7 +254,7 @@
       %small Versie 2
 
 / The non-poweruser method that allows for permission management
-#perm3.step.hide-until-turn{'data-x' => -12000, 'data-y' => 100}
+#perm3.step.hide-until-turn{data_attr(x: -12000, y: 100)}
   %p
     %strong EveryoneTeam
   .arrow
@@ -279,7 +278,7 @@
     %br/
     simpele permissies
 
-#perm4.step{'data-x' => -12000, 'data-y' => -1100, 'data-z' => 1000, 'data-rotate-x' => 75}
+#perm4.step{data_attr(x: -12000, y: -1100, z: 1000, 'rotate-x' => 75)}
   %strong CanCan gem
   %img.block.right{src: '/images/cancan-structure.jpg'}
 
@@ -293,7 +292,7 @@
   %img.block.right{src: '/images/cancan-sequence.jpg'}
 
 / [Stop! Demo time?]
-#demo-permissions.step.center{'data-x' => -13000, 'data-y' => 1000}
+#demo-permissions.step.center{data_attr(x: -13000, y: 1000)}
   %p
     %strong Stop!
     Demo time!
@@ -303,7 +302,7 @@
     [Make movie backup/alternative?]
 
 / [Invitationsystem!]
-#invite1.step{'data-x' => -10000, 'data-y' => -2000}
+#invite1.step{data_attr(x: -10000, y: -2000)}
   %strong Uitnodigingssysteem
   / [Plaatje met structuur van invite1?]
   / [Plaatje met flow?]
@@ -323,10 +322,10 @@
         %li Ontkoppeling
 
 / Back to the scope
-#github-overview.step{'data-x' => -9600, 'data-y' => -4900, 'data-z' => 400}
+#github-overview.step{data_attr(x: -9600, y: -4900, z: 400)}
 
 / What to do for Github integration?
-#github1.step{'data-x' => -10000, 'data-y' => -3500}
+#github1.step{data_attr(x: -10000, y: -3500)}
   %strong Github-integratie
   .white.block.right
     %img{src: '/images/inspectocat.jpg', alt: 'Github inspectocat octocat', style: 'width: 200px; height: 200px;' }
@@ -336,7 +335,7 @@
     %li mogelijkheden
 
 / Github intregration will include..
-#github2.step{'data-x' => -9200, 'data-y' => -3500}
+#github2.step{data_attr(x: -9200, y: -3500)}
   .white.block.right
     %img{src: '/images/collabocats.jpg', alt: 'Github collabocats octocat', style: 'width: 300px; height: 300px;' }
   %strong Nu:
@@ -366,10 +365,10 @@
 
 / Back to the scope
 / [No *extra* slides]
-/ #scope-extra#extra-overview.step{'data-x' => -9800, 'data-y' => -5000, 'data-z' => 400}
+/ #scope-extra#extra-overview.step{data_attr(x: -9800, y: -5000, z: 400}
 
 / Planning? Hah!
-#planning.step{'data-x' => -7000, 'data-y' => -3500, 'data-rotate-x' => -90, 'data-rotate-y' => -90}
+#planning.step{data_attr(x: -7000, y: -3500, 'rotate-x' => -90, 'rotate-y' => -90)}
   %em.center Projecten lopen (bijna) altijd anders
   %hr/
   %em.center Tijd besteed aan andere onderdelen
@@ -378,7 +377,7 @@
 
 / I did extra stuff you know ~_~
 / / [They don't want to hear it, maybe a small mention of the web API?]
-/ #extra1.step.hide-until-turn{'data-x' => -7000, 'data-y' => -3500, 'data-z' => 35}
+/ #extra1.step.hide-until-turn{data_attr(x: -7000, y: -3500, z: 35)}
 /   %p
 /     %strong * Extra *
 
@@ -392,7 +391,7 @@
 /       installatiegenerator
 
 / / One does not simply test JavaScript
-/ #js-testing1.step{'data-x' => -7000, 'data-y' => -2000, 'data-scale' => 2}
+/ #js-testing1.step{data_attr(x: -7000, y: -2000, scale: 2)}
 /   %strong.center JavaScript-testing
 /   %br/
 /   %p.center
@@ -401,7 +400,7 @@
 /     %em (is ook niet makkelijk)
 
 / / What did we accomplish?
-/ #js-testing2.step{'data-x' => -7800, 'data-y' => -2000, 'data-rotate-y' => -90, 'data-rotate' => 90}
+/ #js-testing2.step{data_attr(x: -7800, y: -2000, 'rotate-y' => -90, rotate: 90)}
 /   %p
 /     %strong Onderzoek naar test-setup
 /   .div
@@ -422,7 +421,7 @@
 /     Is een onderwerp voor een compleet nieuw afstudeerproject..
 
 / / [Stop! Demo time]
-/ #demo-konacha.step.center{'data-x' => -7000, 'data-y' => -1600, 'data-z' => 2000, 'data-rotate-x' => 20, 'data-scale' => 2}
+/ #demo-konacha.step.center{data_attr(x: -7000, y: -1600, z: 2000, 'rotate-x' => 20, scale: 2)}
 /   %strong Stop!
 /   / Address is Konacha local server
 /   %a{href: 'http://localhost:3500/'} Demo time!
@@ -431,7 +430,7 @@
 / [Web API?]
 
 / Wrapping up
-#conclusion-overview.step{'data-x' => -10000, 'data-y' => -4900, 'data-scale' => 2}
+#conclusion-overview.step{data_attr(x: -10000, y: -4900, scale: 2)}
   .notes.note-usersystem
     %ul.list
       %li Veilig
@@ -446,7 +445,7 @@
 / Aanbevelingen
 
 / Well thanks for hearing me ramble!
-#thanks.step.center{'data-x' => -13500, 'data-y' => -5000, 'data-z' => 1000, 'data-rotate' => 90, 'data-rotate-y' => -70, 'data-scale' => 5}
+#thanks.step.center{data_attr(x: -13500, y: -5000, z: 1000, rotate: 90, 'rotate-y' => -70, scale: 5)}
   %p Bedankt voor het luisteren!
 
   %p
@@ -463,10 +462,10 @@
       %a{href: 'https://github.com/Newanz/appsignal-presentation'} Github
 
 / Debug overview, activate all the things!
-#debug-overview.step{'data-x' => -10000, 'data-y' => -5000, 'data-z' => 10000}
+#debug-overview.step{data_attr(x: -10000, y: -5000, z: 10000)}
 
 / How about I wrap this up?
-/ #conclusion.step{'data-x' => -15000, 'data-y' => -8000, 'data-z' => 0}
+/ #conclusion.step{data_attr(x: -15000, y: -8000, z: 0)}
 /   %strong Conclusie
 /   %p [Make this an image/figure of the entire AppSignal system with my work highlighted?]
 
