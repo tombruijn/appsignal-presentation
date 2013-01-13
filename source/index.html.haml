@@ -262,7 +262,7 @@
       %small Versie 2
 
 / The non-poweruser method that allows for permission management
-#perm3.step.hide-until-turn{data_attr(x: -12000, y: 100)}
+#perm3.step.hide-until-turn{data_attr(x: -12000, y: 400)}
   %p
     %strong EveryoneTeam
   .arrow
@@ -285,7 +285,19 @@
     EveryoneTeam automatiseert
     %br/
     simpele permissies
-  / TODO Sequence diagrams to show the difference in calling members between a normal team and everyoneteam?
+  %br/
+
+  .white.block.left
+    = link_to '/images/normalteam-sequence.jpg', 'target' => '_blank' do
+      %img{src: "images/normalteam-sequence.jpg"}
+    .center
+      %small Normal team
+
+  .white.block.right
+    = link_to '/images/everyoneteam-sequence.jpg', 'target' => '_blank' do
+      %img{src: "images/everyoneteam-sequence.jpg"}
+    .center
+      %small EveryoneTeam
 
 #perm4.step{data_attr(x: -12000, y: -1100, z: 1000, 'rotate-x' => 75)}
   = link_to '/images/cancan-structure.jpg', 'target' => '_blank' do
@@ -294,16 +306,18 @@
 
   %ul.list
     %li
-      %p Ability-model
+      %p Ability-class
       %small Gecentraliseerde opslag permissies
-    %li
-      Autorisatiecontrole op controller-niveau
   %br/
+  %ul.list
+    %li
+      Autorisatie op controller-niveau
+  .center
   = link_to '/images/cancan-sequence.jpg', 'target' => '_blank' do
     %img.block.right{src: '/images/cancan-sequence.jpg'}
 
 / TODO Stop! Demo time
-#demo-permissions.step.center{data_attr(x: -13000, y: 1000)}
+#demo-permissions.step.center{data_attr(x: -15000, y: 1000)}
   %p
     %strong Stop!
     Demo time!
