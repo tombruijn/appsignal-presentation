@@ -326,11 +326,9 @@
   %p
     [Make movie backup/alternative?]
 
-/ TODO Invitationsystem!
+/ Invitationsystem!
 #invite1.step{data_attr(x: -10000, y: -2000)}
   %strong Uitnodigingssysteem
-  / TODO Plaatje met structuur van invite1?
-  / TODO Plaatje met flow?
   %ul.list
     %li
       %p
@@ -345,6 +343,11 @@
       %ul.list
         %li Privacy
         %li Ontkoppeling
+
+#invite2.step{data_attr(x: -9000, y: -2000)}
+  .white.block
+    %iframe{src: "images/invitationsystem.svg"}
+    %small.right= link_to 'Open', 'images/invitationsystem.svg', 'target' => '_blank'
 
 / Back to the scope
 #github-overview.step{data_attr(x: -9600, y: -4900, z: 400)}
@@ -392,7 +395,7 @@
 / No: No *extra* slides
 / #scope-extra#extra-overview.step{data_attr(x: -9800, y: -5000, z: 400}
 
-/ Planning? Hah!
+/ Planning?
 #planning.step{data_attr(x: -7000, y: -3500, 'rotate-x' => -90, 'rotate-y' => -90)}
   %em.center Projecten lopen (bijna) altijd anders
   %small.center Web-API en Github-integratie
@@ -402,7 +405,7 @@
   / TODO Vermelden web api en wijzigingen planning?
 
 / I did extra stuff you know ~_~
-/ / TODO They don't want to hear it, maybe a small mention of the web API?
+/ TODO They don't want to hear it, maybe a small mention of the web API?
 / #extra1.step.hide-until-turn{data_attr(x: -7000, y: -3500, z: 35)}
 /   %p
 /     %strong * Extra *
@@ -539,26 +542,3 @@
 
 / Debug overview, activate all the things!
 #debug-overview.step{data_attr(x: -10000, y: -5000, z: 10000)}
-
-/ How about I wrap this up?
-/ #conclusion.step{data_attr(x: -15000, y: -8000, z: 0)}
-/   %strong Conclusie
-/   %p [Make this an image/figure of the entire AppSignal system with my work highlighted?]
-
-/   %ul.list
-/     %li
-/       Gebruikerssysteem
-/       %ul.list
-/         %li Authenticatie-
-/         %li Permissie-
-/         %li Uitnodigings-systeem [niet behandeld]
-/     %li Github-integratie
-/     %li
-/       %p [Web-API niet in afstudeerproject]
-/       %small [Pas aan het einde behandeld buiten het project]
-/     %li
-/       Extra onderdelen
-/       %ul.list
-/         %li AppSignal Ruby gem
-/         %li JavaScript testing
-
