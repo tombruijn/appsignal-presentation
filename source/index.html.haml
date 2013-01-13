@@ -1,5 +1,3 @@
-/ [Images to local repo]
-
 / Starting slide
 #start.step{data_attr(x: -10000, y: -10000)}
   %p.as-logo AppSignal
@@ -445,22 +443,69 @@
 
 / Wrapping up
 / [Better keywords for subsystems]
-#conclusion-overview.step{data_attr(x: -10000, y: -4900, scale: 2)}
+#conclusion-overview.step{data_attr(x: -10000, y: -4850, scale: 2)}
   .notes.note-authsystem
     Sessiebeheer
   .notes.note-permsystem
-    Beveiliging
+    Centrale beveiliging
   .notes.note-invisystem
-    Delen
+    Delen van data
   .notes.note-github
-    Basis voor de toekomst
-  / .notes.note-extra
-  /   %ul.list
-  /     %li AppSignal gem
-  /     %li JavaScript testing
+    %p Basis voor de toekomst
+    %p Meeste nieuwe logica
+  .notes.note-global.white.block
+    %ul.list
+      %li Ruby gems
+      %li Onderhoudbaar
+      %li Gedocumenteerd
+      %li en alles online!
 
 / [Evaluatie]
+/ #evalutation.step.big-slide{data_attr(x: -5000, y: -4900)}
+/   %strong Evaluatie
+/   %p
+/     AppSignal test suite
+/     %small
+/       %small (not really)
+/   %p
+/     %small authsystem.should be_running
+/   %p
+/     %small github_authsystem.should be_running
+/   %p
+/     %small permissionsystem.should be_running
+/   %p
+/     %small invitationsystem.should be_running
+/   %p
+/     %small github_site_link.should be_up
+/   %p
+/     %small tom = beans.employees.find_by(name: 'Tom de Bruijn')
+/   %p
+/     %small tom.should be_working_on_recommendations
+
+/   %p Finished in 0.1337 seconds
+/   %p 6 examples, 0 failures
+
 / [Aanbevelingen]
+#recommendations.step.big-slide{data_attr(x: -7000, y: -4900)}
+  %strong Aanbevelingen
+  %ul.list
+    %li
+      %small (Permissiesysteem) CanCan gem + Mongoid gem =
+      %p Upgraden bij nieuwe CanCan release
+    %li
+      Beter notificatie management
+      %ul
+        %li
+          %img{src: '/images/white_check_mark.png', style: 'width: 40px;'}
+          Multi-email
+          %small per account
+        %li
+          %img{src: '/images/white_check_mark.png', style: 'width: 40px;'}
+          Notificaties uitzetten
+          %small per project
+    %li
+      Uitnodigingen traceren
+
 
 / Well thanks for hearing me ramble!
 #thanks.step.center{data_attr(x: -13500, y: -5000, z: 500, rotate: 90, 'rotate-y' => -70, scale: 5)}

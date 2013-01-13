@@ -501,6 +501,7 @@ a:focus {
   Custom styles
 */
 
+.big-slide,
 #about-me,
 #methods,
 #scope,
@@ -617,7 +618,7 @@ a:focus {
     }
   }
 }
-.impress-on-thanks #scope-usersystem.step,
+.impress-on-recommendations #scope-usersystem.step,
 .impress-on-conclusion-overview #scope-usersystem.step .scope-subsystems {
   .permsystem {
     top: 120px;
@@ -646,7 +647,7 @@ a:focus {
   }
 }
 
-.impress-on-thanks .step,
+.impress-on-recommendations .step,
 .impress-on-conclusion-overview .step {
   .project-scope-title {
     display: none;
@@ -661,17 +662,22 @@ a:focus {
     left: -110px;
   }
   .note-authsystem {
-    top: 200px;
+    top: 300px;
   }
   .note-permsystem {
-    top: 260px;
+    top: 355px;
   }
   .note-invisystem {
-    top: 310px;
+    top: 410px;
   }
   .note-github {
-    top: 10px;
+    top: 110px;
     left: 254px;
+  }
+  .note-global {
+    top: 130px;
+    left: 265px;
+    width: 270px;
   }
 }
 
