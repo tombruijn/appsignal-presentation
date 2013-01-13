@@ -4,6 +4,8 @@ Author: Tom de Bruijn
 Presentation about certain [AppSignal](http://appsignal.com) subsystems.  
 Powered by: [impress.js](https://github.com/bartaz/impress.js)
 
+Can be found live at: (appsignalpresentation.tomdebruijn.com)[appsignalpresentation.tomdebruijn.com]
+
 ## About
 
 __This is in no way a finished project.__
