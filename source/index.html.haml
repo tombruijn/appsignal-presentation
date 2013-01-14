@@ -223,11 +223,10 @@
     %iframe{src: "images/authsystem-with-github.svg", alt: "Authenticatiesysteem"}
     %small.right= link_to 'Open', 'images/authsystem-with-github.svg', 'target' => '_blank'
 
-/ TODO Stop! Demo time
+/ Stop! Demo time
 #demo-auth.step.center{data_attr(x: -13000, y: -2200)}
   %strong Stop!
-  %a{href: 'http://localhost:3000/users/sign_in', target: :_blank} Demo time!
-  %p [Make movie backup/alternative?]
+  %a{href: 'http://localhost:3000', target: :_blank} Demo time!
 
 / Yep, that's what makes it a permissionsystem
 #perm1.step{data_attr(x: -12000, y: -1000)}
@@ -335,14 +334,19 @@
         Toevoegen personen
         %small aan het systeem
       %small (Medewerkers, klanten, etc.)
-    %li Via e-mail
-    %li
-      %p Koppeling permissiesysteem
-      %small Direct koppelen van teams
-    %li
       %ul.list
-        %li Privacy
-        %li Ontkoppeling
+        %li Via e-mail
+    %li
+      Logica voor:
+      %ul.list
+        %li
+          %p Bestaande accounts
+          %small (Privacy en ontkoppeling)
+        %li Github gebruikers
+        %li
+          %p Teams
+          %small (Koppeling permissiesysteem)
+    %li Geen Ruby-gem
 
 #invite2.step{data_attr(x: -9000, y: -2000)}
   .white.block
@@ -377,15 +381,15 @@
     %li
       %div Code links
       %small
-        %em Bekijk de probleematische code in AppSignal
+        %em Bekijk de problematische code in AppSignal
     %li
       %div Code vergelijking
       %small
-        %em Vergelijk probleematische code met een vorige versie
+        %em Vergelijk probl§ematische code met een vorige versie
     %li
       %div Teams import
       %small
-        %em Makkerlijkere opzet permissiesysteem voor klanten
+        %em Makkelijkere opzet permissiesysteem voor klanten
     %li
       %div Github issues aanmaken
       %small
