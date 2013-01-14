@@ -501,6 +501,10 @@ a:focus {
   Custom styles
 */
 
+.notes {
+  display: none
+}
+
 .big-slide,
 #about-me,
 #methods,
@@ -637,7 +641,7 @@ a:focus {
 .impress-on-github1,
 .impress-on-extra-overview,
 .impress-on-planning {
-  #conclusion-overview .notes {
+  #conclusion-overview .text {
     display: none
   }
   .step {
@@ -655,26 +659,26 @@ a:focus {
 }
 
 #conclusion-overview {
-  .notes {
+  .text {
     position: relative;
     font-size: 60%;
     width: 400px;
     left: -110px;
   }
-  .note-authsystem {
+  .text-authsystem {
     top: 300px;
   }
-  .note-permsystem {
+  .text-permsystem {
     top: 355px;
   }
-  .note-invisystem {
+  .text-invisystem {
     top: 410px;
   }
-  .note-github {
+  .text-github {
     top: 110px;
     left: 254px;
   }
-  .note-global {
+  .text-global {
     top: 130px;
     left: 265px;
     width: 270px;

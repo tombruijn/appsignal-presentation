@@ -1,6 +1,10 @@
 / Starting slide
 #start.step{data_attr(x: -10000, y: -10000)}
   %p.as-logo AppSignal
+  .notes
+    %ul
+      %li Welcome
+      %li AppSignal
 
 / Intro me!
 #about-me.step.big-slide{data_attr(x: -10000, y: -9200)}
@@ -16,6 +20,16 @@
     %small 
       Presentatie powered by:
       %a{href: 'https://github.com/bartaz/impress.js'} impress.js
+  
+  .notes
+    %ul
+      %li
+        Wie ben ik?
+        %ul
+          %li Tom de Bruijn
+    %ul
+      %li Presenatie <strong>IS NIET</strong> Powerpoint
+      %li Presenatie <strong>IS</strong> Impress.js
 
 / Intro 80beans and school
 #companies.step{data_attr(x: -10000, y: -9200, 'rotate-x' => -90)}
@@ -47,10 +61,40 @@
       .jacob-photo
     %li
       .geurt-photo
+  .notes
+    %ul
+      %li
+        Hogeschool Utrecht
+        %ul
+          %li Begeleider: Joop Kaldeway
+    %ul
+      %li
+        80beans
+        %ul
+          %li Begeleider: Thijs Cadier
+          %li
+            Medewerkers:
+            %ul
+              %li Roy Tomeij
+              %li Ron Cadier
+              %li Robert Beekman
+              %li Steven Weller
+              %li Jacob Vosmaer
+              %li Geurt Sengers
+              %li Hetty de Vries
 
 / What is AppSignal?
 #as-process-overview.step{data_attr(x: -10150, y: -7900, scale: 2)}
   %p Wat is AppSignal?
+
+  .notes
+    %ul
+      %li Wat is AppSignal?
+
+      %ul
+        %li Voor ontwikkelaars
+        %li Monitoring snelheid software
+        %li Fout rapportage
 
 #as-process-visitors.step{data_attr(x: -10900, y: -8030)}
   %p
@@ -58,6 +102,15 @@
       %img{src: '/images/busts_in_silhouette.png'}
       Bezoekers
     %small Website/Webapplicatie
+
+  .notes
+    %ul
+      %li
+        Bezoekers
+        %ul
+          %li van een website
+          %li activeren code van een website
+          %li Door hun acties kan iets fout gaan
 
 #as-process-client.step{data_attr(x: -10500, y: -8010)}
   .arrow
@@ -71,6 +124,11 @@
       %small
         %img.client-icon{src: '/images/bust_in_silhouette.png'}
         Klant (van AppSignal)
+  .notes
+    %ul
+      %li Website is van een AppSignal klant
+      %li Wil snelheid en fouten analyseren
+      %li Ruby on Rails applicatie
 
 #as-process-gem.step{data_attr(x: -10100, y: -8025)}
   .arrow
@@ -81,6 +139,12 @@
     %div AppSignal gem
     %small (geinstalleerd op de website)
 
+  .notes
+    %ul
+      %li Tool/Gem moet geïnstalleerd
+      %li In Rails, luistert naar fouten en HTTP requests
+      %li Stuurt data naar AppSignal servers
+
 #as-process-server.step{data_attr(x: -9500, y: -8010)}
   .arrow
     .arrow-horizontal-line
@@ -90,6 +154,11 @@
     %small (Website)
     %p
       %small Berekeningen en foutanalyse
+  .notes
+    %ul
+      %li Ontvangt log data, klant website
+      %li Berekend snelheid, statistieken
+      %li Foutanalyse
 
 #as-process-email.step{data_attr(x: -9500, y: -7860)}
   .arrow
@@ -100,8 +169,17 @@
       %img{src: '/images/envelope.png'}
       E-mail
       %small (indien iets fout is)
+  .notes
+    %ul
+      %li Bij fouten
+      %li Zeer trage pagina's, requests
+      %li Stuur emailbericht
 
 #as-process-client-overview.step{data_attr(x: -10500, y: -8010)}
+  .notes
+    %ul
+      %li Klant ontvangt email
+      %li Directe link naar AppSignal pagina met meer informatie
 
 / With what was this all made?
 #technologies.step{data_attr(x: -11000, y: -6700, 'rotate-x' => -50, scale: 2)}
@@ -120,6 +198,18 @@
   %p.center
     %em en meer...
 
+  .notes
+    %ul
+      %li Ruby taal
+      %li Rails framework
+      %li Ruby gems
+      %li
+        MongoDB
+        %ul
+          %li Document oriented database
+          %li Analyse voordelen
+          %li Geen relationeel model nodig
+
 / Using what methods was this all made?
 / TODO Keep?
 #methods.step{data_attr(x: -9000, y: -6700, 'rotate-x' => -50, scale: 2)}
@@ -137,6 +227,21 @@
       %p Behavior driven-development (BDD)
       %small Tests eerst, daarna code
 
+  .notes
+    %ul
+      %li
+        Agile
+        %ul
+          %li voortschrijdend inzicht
+      %li
+        Lean
+        %ul
+          %li Begin minimaal
+      %li
+        BDD - Behavior Driven-Development
+        %ul
+          %li Test first
+
 / Project scope
 / Doubles as the conclusion slide
 #scope.step{data_attr(x: -10000, y: -5200, scale: 2)}
@@ -148,6 +253,12 @@
 
   .scope-website.white.block Website
 
+  .notes
+    %ul
+      %li Beperkt tot website
+      %li Waar de informatie naar toegestuurd wordt
+      %li en later op weergegeven
+
 #scope-usersystem.step{data_attr(x: -10400, y: -4690)}
   .white.block.usersystem
     %strong.center Gebruikerssysteem
@@ -157,8 +268,41 @@
     .white.block.permsystem Permissiesysteem
     .white.block.invisystem Uitnodigingssysteem
 
+  .notes
+    %ul
+      %li
+        Gebruikerssysteem
+        %ul
+          %li
+            Authenticatiesysteem
+            %ul
+              %li Beheren sessies gebruikers website
+          %li
+            Permissiesysteem
+            %ul
+              %li Afschermen data klanten
+          %li
+            Uitnodigingssysteem
+            %ul
+              %li Delen van data met medewerkers
+
 #scope-github.step.block.center{data_attr(x: -9600, y: -4840)}
   %strong Github-integratie
+
+  .notes
+    %ul
+      %li
+        Github
+        %ul
+          %li Derde partij
+          %li Git
+          %li code hosting
+          %li veel ontwikkelaars/bedrijven maken er gebruik van
+      %li
+        Integratie biedt voordelen aan klanten
+        %ul
+          %li Sneller bij probleem code terecht komen
+          %li Minder onderzoek
 
 / TODO Removed because they (school) didn't want to see it
 / #scope-extra.step.block.center{data_attr(x: '-9400', y: '-4900')}
@@ -181,6 +325,21 @@
     %iframe{src: "images/authsystem.svg", alt: "Authenticatiesysteem"}
     %small.right= link_to 'Open', 'images/authsystem.svg', 'target' => '_blank'
 
+  .notes
+    %ul
+      %li
+        Wat is een authenticatiesysteem?
+        %ul
+          %li Login
+          %li Registratie
+          %li Profiel beheren
+          %li Wachtwoord vergeten
+      %li
+        Plaatje 1
+        %ul
+          %li Controle van gebruikers, geen ongeoorloofde toegang
+          %li Geen login = geen entry
+
 / With what was it made?
 #auth3.step{data_attr(x: -12800, y: -3500)}
   %p
@@ -195,6 +354,36 @@
   %br/
   %br/
   %p of eigen implementatie?
+
+  .notes
+    %ul
+      %li
+        devise en Authlogic
+        %ul
+          %li open source en modulair
+      %li
+        %strong devise
+        %ul
+          %li modulair genoeg, niet doorgeslagen
+          %li Indien nodig logica altijd aan te passen
+          %li Kan door 80beans onderhouden worden
+      %li
+        %strong Authlogic
+        %ul
+          %li meer modulair dan devise
+          %li meer integratie werk
+          %li biedt alleen basis logica aan
+      %li
+        %strong Eigen implementatie
+        %ul
+          %li Meer risico
+          %li Meer nieuwe logica
+          %li Geen voordelen van de gems
+          %li 100-en uren aan werk zit al in de gems
+
+      %br/
+      %p
+        %strong Dus devise!
 
 / It also support Github authentication
 #github-auth1.step{data_attr(x: -12000, y: -2200)}
@@ -217,16 +406,77 @@
       %p Implementatie devise-module
       %small met AppSignal
 
+  .notes
+    %ul
+      %li Login via Github
+      %li
+        Waarom?
+        %ul
+          %li Weer een nieuwe account = niet gewenst
+          %li Github-integratie
+      %li
+        Hoe?
+        %ul
+          %li
+            Github-API
+            %ul
+              %li communicatie met Github
+              %li
+                via
+                %strong OAuth2-protocol
+                %ul
+                  %li veel gebruikt authenticatie protocol voor web-services
+          %li
+            devise-module
+            %ul
+              %li open source implementatie voor communicatie met services via o.a. OAuth2
+      %br/
+      %p
+        %strong Implementatie AppSignal website logica
+
 / Auth image with Github!
 #github-auth2.step.hide-until-turn{data_attr(x: -12000, y: -2200, z: -400, 'rotate-y' => 180)}
   .white.block
     %iframe{src: "images/authsystem-with-github.svg", alt: "Authenticatiesysteem"}
     %small.right= link_to 'Open', 'images/authsystem-with-github.svg', 'target' => '_blank'
 
+  .notes
+    %ul
+      %li
+        Uitbreiding op login logica
+        %ul
+          %li
+            Login path via Github
+      %li
+        Bij Github wordt het verzoek gedaan:
+        %ul
+          %li tot Github account inlog
+          %li autorisatie AppSignal website
+      %li
+        Bij antwoord, terug naar AppSignal
+        %ul
+          %li
+            Correct: login
+            %ol
+              %li Create user
+              %li
+                Of update user data
+                %ul
+                  %li User data most up-to-date blijven
+    %br/
+    %p
+      %strong Extra path = meer logica
+    %p
+      %strong Gebruikerervaring beter!
+
 / Stop! Demo time
 #demo-auth.step.center{data_attr(x: -13000, y: -2200)}
   %strong Stop!
   %a{href: 'http://localhost:3000', target: :_blank} Demo time!
+
+  .notes
+    %p Demo
+    %p Authentication
 
 / Yep, that's what makes it a permissionsystem
 #perm1.step{data_attr(x: -12000, y: -1000)}
@@ -237,6 +487,12 @@
   %hr/
   %em.center
     Het permissiesysteem schermt data af
+
+  .notes
+    %p Het authenticatiesysteem geeft toegang
+    %p (tot alles)
+    %br/
+    %p Het permissiesysteem schermt data af
 
 / What did I made out of it?
 #perm2.step.hide-until-turn{data_attr(x: -12000, y: -500)}
@@ -259,6 +515,50 @@
       %img{src: "images/permissionsystem-version2.jpg", alt: "Permissiesysteem versie 2"}
     .center
       %small Versie 2
+
+  .notes
+    %ul
+      %li
+        Permissiemodel (wie welke rechten heeft)
+      %li Eis: Gecentraliseerde opslag permissies
+      %li Eis: Teams beheren permissies
+      %li
+        Versie 1
+        %ul
+          %li
+            Geen directe relatie
+            %ul
+              %li teams en team leden
+              %li teams en sites
+          %li
+            Voordelen
+            %ul
+              %li snelheid (fractie)
+              %li direct bij site opvragen toegang leden
+          %li
+            Nadelen
+            %ul
+              %li te veel queries om bij te werken
+              %li te veel queries bij account leden management
+      %li
+        Versie 2
+        %ul
+          %li
+            Relaties tussen
+            %ul
+              %li teams en team leden
+              %li teams en sites
+          %li
+            Voordelen
+            %ul
+              %li vanuit de code direct objecten aan te roepen
+              %li beter management teams
+              %li minder queries, op andere manier sneller
+          %li
+            Nadelen
+            %ul
+              %li Kan niet direct bij site opvragen toegang
+              %li Moet via teams
 
 / The non-poweruser method that allows for permission management
 #perm3.step.hide-until-turn{data_attr(x: -12000, y: 400)}
@@ -298,6 +598,15 @@
     .center
       %small EveryoneTeam
 
+  .notes
+    %ul
+      %li Teams permissies is niet voor iedereen
+    %br/
+    %ul
+      %li EveryoneTeam is standaard team
+      %li Iedereen is lid (van account)
+      %li Simpele permissiemodellen
+
 #perm4.step{data_attr(x: -12000, y: -1100, z: 1000, 'rotate-x' => 75)}
   = link_to '/images/cancan-structure.jpg', 'target' => '_blank' do
     %img.block.right{src: '/images/cancan-structure.jpg'}
@@ -315,15 +624,36 @@
   = link_to '/images/cancan-sequence.jpg', 'target' => '_blank' do
     %img.block.right{src: '/images/cancan-sequence.jpg'}
 
+  .notes
+    %ul
+      %li
+        CanCan: Ruby gem voor permissies
+        %ul
+          %li basis implementatie van structuur
+          %li Eis: biedt 1 locatie aan voor permissies
+          %li controle op controllerniveau
+    %br/
+    %ul
+      %li
+        Plaatje 1
+        %ul
+          %li structuur CanCan binnen Rails
+      %li
+        Plaatje 2
+        %ul
+          %li sequence diagram van CanCan
+
 / TODO Stop! Demo time
 #demo-permissions.step.center{data_attr(x: -15000, y: 1000)}
   %p
     %strong Stop!
     Demo time!
   %p
-    %small (Browser switch)
-  %p
     [Make movie backup/alternative?]
+
+  .notes
+    %p Demo
+    %p Permissiesysteem
 
 / Invitationsystem!
 #invite1.step{data_attr(x: -10000, y: -2000)}
@@ -348,13 +678,50 @@
           %small (Koppeling permissiesysteem)
     %li Geen Ruby-gem
 
+  .notes
+    %ul
+      %li Doel: Toevoegen medewerkers aan het systeem
+      %li Geen 1 persoon verantwoordelijk
+      %li
+        Uitnodigingen gaan via email
+        %ul
+          %li bevat link voor registratie en koppeling account
+    %ul
+      %li
+        Logica voor
+        %ul
+          %li
+            bestaande accounts
+            %ul
+              %li directe koppeling bij login
+              %li ontkoppeling van accounts
+          %li
+            Github gebruikers
+            %ul
+              %li koppeling bij login
+          %li
+            Teams
+            %ul
+              %li directe koppeling aan teams bij inloggen
+    %ul
+      %li
+        Geen Ruby gem
+        %ul
+          %li Logica te specifiek
+          %li weinig goede gems beschikbaar
+
 #invite2.step{data_attr(x: -9000, y: -2000)}
   .white.block
     %iframe{src: "images/invitationsystem.svg"}
     %small.right= link_to 'Open', 'images/invitationsystem.svg', 'target' => '_blank'
 
+  .notes
+    Uitnodigingflow op scherm
+
 / Back to the scope
 #github-overview.step{data_attr(x: -9600, y: -4900, z: 400)}
+  .notes
+    \-> Github-integratie
 
 / What to do for Github integration?
 #github1.step{data_attr(x: -10000, y: -3500)}
@@ -365,6 +732,16 @@
   %ul.list
     %li Github API
     %li mogelijkheden
+
+  .notes
+    %strong Github-integratie
+    %ul
+      %li Verbeteren gebruikerservaring
+      %li
+        Hoe?
+        %ul
+          %li Onderzoek API
+          %li wat is mogelijk met de API?
 
 / Github intregration will include..
 #github2.step{data_attr(x: -9200, y: -3500)}
@@ -395,6 +772,38 @@
       %small
         %em Issue met alle bijbehorende data (die AppSignal heeft)
 
+  .notes
+    %p Nu:
+    %ul
+      %li
+        Site link
+        %ul
+          %li Koppelen sites in AppSignal met Github repositories
+          %li
+            Is
+            %strong SOWIESO
+            nodig voor de toekomst
+    %p Toekomst:
+    %ul
+      %li
+        Code links
+        %ul
+          %li openen code in AppSignal
+      %li
+        Code vergelijking
+        %ul
+          %li vergelijk vorige versies van de code in AppSignal
+      %li
+        Teams import
+        %ul
+          %li Importeren Github instellingen
+          %li Makkelijkere/sneller gebruik maken van AppSignal
+      %li
+        Github issues
+        %ul
+          %li Aanmaken issues bij foutmeldingen
+          %li AppSignal kan alle bruikbare informatie exporteren naar een Github issue
+
 / Back to the scope
 / No: No *extra* slides
 / #scope-extra#extra-overview.step{data_attr(x: -9800, y: -5000, z: 400}
@@ -407,6 +816,17 @@
   %em.center Tijd besteed aan andere onderdelen
   %em.center dan vermeld in Plan van Aanpak
   / TODO Vermelden web api en wijzigingen planning?
+
+  .notes
+    %ul
+      %li Projecten lopen altijd anders
+    %ul
+      %li Web-API wordt nu pas aan gewerkt
+    %ul
+      %li
+        %p Github-integratie nog niet af
+      %li
+        %p Daarom tijd besteed aan dingen buiten het project
 
 / I did extra stuff you know ~_~
 / TODO They don't want to hear it, maybe a small mention of the web API?
@@ -464,21 +884,54 @@
 
 / Wrapping up
 #conclusion-overview.step{data_attr(x: -10000, y: -4850, scale: 2)}
-  .notes.note-authsystem
+  .text.text-authsystem
     Sessiebeheer
-  .notes.note-permsystem
+  .text.text-permsystem
     Centrale beveiliging
-  .notes.note-invisystem
+  .text.text-invisystem
     Delen van data
-  .notes.note-github
+  .text.text-github
     %p Basis voor de toekomst
     %p Meeste nieuwe logica
-  .notes.note-global.white.block
+  .text.text-global.white.block
     %ul.list
       %li Ruby gems
       %li Onderhoudbaar
       %li Gedocumenteerd
       %li en alles online!
+
+  .notes
+    %ul
+      %li
+        Gebruikerssysteem
+        %ul
+          %li Beveiliging
+          %li Delen van gegevens met medewerkers
+      %li
+        Github-integratie
+        %ul
+          %li Verbeteren gebruikerservaring
+    %ul
+      %li
+        Result
+        %ul
+          %li
+            Ruby gems
+            %ul
+              %li gebruikt waar nodig
+              %li zijn bewezen oplossingen voor problemen
+          %li code is onderhoudbaar
+          %li code is gedocumenteerd
+          %li
+            Alle afgeronde prodocten staan online
+    %ul
+      %li
+        Evaluatie
+        %ul
+          %li Ging goed
+          %li niet perfect
+          %li iets te ambitieuze planning
+          %li we werken nog aan de aanbevelingen
 
 / TODO Evaluatie
 / #evalutation.step.big-slide{data_attr(x: -5000, y: -4900)}
@@ -526,6 +979,26 @@
     %li
       Uitnodigingen traceren
 
+  .notes
+    %ul
+      %li CanCan upgrade
+    %ul
+      %li
+        Beter notificatie systeem
+        %ul
+          %li
+            Multi-email
+            %ul
+              %li Per account een email instellen
+          %li
+            Notificaties uitzetten per project
+            %ul
+              %li geen overvolle mailbox
+    %ul
+      %li
+        Uitnodigingen traceren
+        %ul
+          %li controle op aankomst
 
 / Well thanks for hearing me ramble!
 #thanks.step.center{data_attr(x: -13500, y: -5000, z: 500, rotate: 90, 'rotate-y' => -70, scale: 5)}
@@ -543,6 +1016,9 @@
     %small
       De broncode van de presentatie is te vinden op
       %a{href: 'https://github.com/Newanz/appsignal-presentation'} Github
+
+  .notes
+    Relax, you're done!
 
 / Debug overview, activate all the things!
 #debug-overview.step{data_attr(x: -10000, y: -5000, z: 10000)}
