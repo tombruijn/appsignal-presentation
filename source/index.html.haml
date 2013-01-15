@@ -175,11 +175,11 @@
       %li Zeer trage pagina's, requests
       %li Stuur emailbericht
 
-#as-process-client-overview.step{data_attr(x: -10500, y: -8010)}
-  .notes
-    %ul
-      %li Klant ontvangt email
-      %li Directe link naar AppSignal pagina met meer informatie
+/ #as-process-client-overview.step{data_attr(x: -10500, y: -8010)}
+/   .notes
+/     %ul
+/       %li Klant ontvangt email
+/       %li Directe link naar AppSignal pagina met meer informatie
 
 / With what was this all made?
 #technologies.step{data_attr(x: -11000, y: -6700, 'rotate-x' => -50, scale: 2)}
@@ -395,10 +395,6 @@
     %li
       Github-API
       %small communicatie met Github
-      %ul.list
-        %li
-          OAuth2
-          %small -protocol
     %li
       devise-module
       %small Omniauthable
@@ -414,64 +410,56 @@
         %ul
           %li Weer een nieuwe account = niet gewenst
           %li Github-integratie
+    %ul
       %li
         Hoe?
         %ul
           %li
-            Github-API
+            communicatie met Github
             %ul
-              %li communicatie met Github
-              %li
-                via
-                %strong OAuth2-protocol
-                %ul
-                  %li veel gebruikt authenticatie protocol voor web-services
-          %li
-            devise-module
-            %ul
-              %li open source implementatie voor communicatie met services via o.a. OAuth2
+              %li Github-API
+              %li devise-module
       %br/
       %p
         %strong Implementatie AppSignal website logica
 
 / Auth image with Github!
-#github-auth2.step.hide-until-turn{data_attr(x: -12000, y: -2200, z: -400, 'rotate-y' => 180)}
-  .white.block
-    %iframe{src: "images/authsystem-with-github.svg", alt: "Authenticatiesysteem"}
-    %small.right= link_to 'Open', 'images/authsystem-with-github.svg', 'target' => '_blank'
+/ #github-auth2.step.hide-until-turn{data_attr(x: -12000, y: -2200, z: -400, 'rotate-y' => 180)}
+/   .white.block
+/     %iframe{src: "images/authsystem-with-github.svg", alt: "Authenticatiesysteem"}
+/     %small.right= link_to 'Open', 'images/authsystem-with-github.svg', 'target' => '_blank'
 
-  .notes
-    %ul
-      %li
-        Uitbreiding op login logica
-        %ul
-          %li
-            Login path via Github
-      %li
-        Bij Github wordt het verzoek gedaan:
-        %ul
-          %li tot Github account inlog
-          %li autorisatie AppSignal website
-      %li
-        Bij antwoord, terug naar AppSignal
-        %ul
-          %li
-            Correct: login
-            %ol
-              %li Create user
-              %li
-                Of update user data
-                %ul
-                  %li User data most up-to-date blijven
-    %br/
-    %p
-      %strong Extra path = meer logica
-    %p
-      %strong Gebruikerervaring beter!
+/   .notes
+/     %ul
+/       %li
+/         Uitbreiding op login logica
+/         %ul
+/           %li
+/             Login path via Github
+/       %li
+/         Bij Github wordt het verzoek gedaan:
+/         %ul
+/           %li tot Github account login
+/           %li autorisatie AppSignal website
+/       %li
+/         Bij antwoord, terug naar AppSignal
+/         %ul
+/           %li
+/             Correct: login
+/             %ol
+/               %li Create user
+/               %li
+/                 Of update user data
+/                 %ul
+/                   %li User data most up-to-date blijven
+/     %br/
+/     %p
+/       %strong Extra path = meer logica
+/     %p
+/       %strong Gebruikerervaring beter!
 
 / Stop! Demo time
 #demo-auth.step.center{data_attr(x: -13000, y: -2200)}
-  %strong Stop!
   %a{href: 'http://localhost:3000', target: :_blank} Demo time!
 
   .notes
@@ -522,94 +510,91 @@
         Permissiemodel (wie welke rechten heeft)
       %li Eis: Gecentraliseerde opslag permissies
       %li Eis: Teams beheren permissies
+    %ul
       %li
         Versie 1
         %ul
           %li
             Geen directe relatie
             %ul
-              %li teams en team leden
-              %li teams en sites
+              %li teams en team leden en sites
           %li
             Voordelen
             %ul
               %li snelheid (fractie)
-              %li direct bij site opvragen toegang leden
+              %li site kent leden
           %li
             Nadelen
             %ul
-              %li te veel queries om bij te werken
-              %li te veel queries bij account leden management
+              %li veel queries; leden update
+    %ul
       %li
         Versie 2
         %ul
           %li
             Relaties tussen
             %ul
-              %li teams en team leden
-              %li teams en sites
+              %li teams en team leden en sites
           %li
             Voordelen
             %ul
-              %li vanuit de code direct objecten aan te roepen
               %li beter management teams
               %li minder queries, op andere manier sneller
           %li
             Nadelen
             %ul
-              %li Kan niet direct bij site opvragen toegang
-              %li Moet via teams
+              %li site kent geen leden
 
 / The non-poweruser method that allows for permission management
-#perm3.step.hide-until-turn{data_attr(x: -12000, y: 400)}
-  %p
-    %strong EveryoneTeam
-  .arrow
-    .arrow-horizontal-line
-    .arrow-head-right
-  .arrow-content
-    %p
-      Gebruik teams is managerniveau
-  .arrow
-    .arrow-horizontal-line
-    .arrow-head-right
-  .arrow-content
-    %p
-      Niet alle gebruikers zijn managers
-      %br/
-      %small
-        %em (Freelancers, bedrijven van ongeveer tien medewerkers)
-  %br/
-  %p.center
-    EveryoneTeam automatiseert
-    %br/
-    simpele permissies
-  %br/
+/ #perm3.step.hide-until-turn{data_attr(x: -12000, y: 400)}
+/   %p
+/     %strong EveryoneTeam
+/   .arrow
+/     .arrow-horizontal-line
+/     .arrow-head-right
+/   .arrow-content
+/     %p
+/       Gebruik teams is managerniveau
+/   .arrow
+/     .arrow-horizontal-line
+/     .arrow-head-right
+/   .arrow-content
+/     %p
+/       Niet alle gebruikers zijn managers
+/       %br/
+/       %small
+/         %em (Freelancers, bedrijven van ongeveer tien medewerkers)
+/   %br/
+/   %p.center
+/     EveryoneTeam automatiseert
+/     %br/
+/     simpele permissies
+/   / %br/
 
-  .white.block.left
-    = link_to '/images/normalteam-sequence.jpg', 'target' => '_blank' do
-      %img{src: "images/normalteam-sequence.jpg"}
-    .center
-      %small Normal team
+/   / .white.block.left
+/   /   = link_to '/images/normalteam-sequence.jpg', 'target' => '_blank' do
+/   /     %img{src: "images/normalteam-sequence.jpg"}
+/   /   .center
+/   /     %small Normal team
 
-  .white.block.right
-    = link_to '/images/everyoneteam-sequence.jpg', 'target' => '_blank' do
-      %img{src: "images/everyoneteam-sequence.jpg"}
-    .center
-      %small EveryoneTeam
+/   / .white.block.right
+/   /   = link_to '/images/everyoneteam-sequence.jpg', 'target' => '_blank' do
+/   /     %img{src: "images/everyoneteam-sequence.jpg"}
+/   /   .center
+/   /     %small EveryoneTeam
 
-  .notes
-    %ul
-      %li Teams permissies is niet voor iedereen
-    %br/
-    %ul
-      %li EveryoneTeam is standaard team
-      %li Iedereen is lid (van account)
-      %li Simpele permissiemodellen
+/   .notes
+/     %ul
+/       %li Teams permissies is niet voor iedereen
+/     %br/
+/     %ul
+/       %li EveryoneTeam is standaard team
+/       %li Iedereen is lid (van account)
+/       %li Simpele permissiemodellen
 
 #perm4.step{data_attr(x: -12000, y: -1100, z: 1000, 'rotate-x' => 75)}
-  = link_to '/images/cancan-structure.jpg', 'target' => '_blank' do
-    %img.block.right{src: '/images/cancan-structure.jpg'}
+  / = link_to '/images/cancan-structure.jpg', 'target' => '_blank' do
+  /   %img.block.right{src: '/images/cancan-structure.jpg'}
   %strong CanCan gem
 
   %ul.list
@@ -620,6 +605,7 @@
   %ul.list
     %li
       Autorisatie op controller-niveau
+  %br/
   .center
   = link_to '/images/cancan-sequence.jpg', 'target' => '_blank' do
     %img.block.right{src: '/images/cancan-sequence.jpg'}
@@ -627,33 +613,39 @@
   .notes
     %ul
       %li
-        CanCan: Ruby gem voor permissies
-        %ul
-          %li basis implementatie van structuur
-          %li Eis: biedt 1 locatie aan voor permissies
-          %li controle op controllerniveau
-    %br/
+        %strong CanCan
     %ul
       %li
-        Plaatje 1
+        Ruby gem voor permissies
         %ul
-          %li structuur CanCan binnen Rails
+          %li basis implementatie
+          %li
+            %strong Eis:
+            1 locatie voor permissies
+          %li controllerniveau controle
+    %br/
+    %ul
+      / %li
+      /   Plaatje 1
+      /   %ul
+      /     %li structuur CanCan binnen Rails
       %li
         Plaatje 2
         %ul
           %li sequence diagram van CanCan
 
 / TODO Stop! Demo time
-#demo-permissions.step.center{data_attr(x: -15000, y: 1000)}
-  %p
-    %strong Stop!
-    Demo time!
-  %p
-    [Make movie backup/alternative?]
+/ #demo-permissions.step.center{data_attr(x: -15000, y: 1000)}
+/   %p
+/     Demo time!
+/   %p
+/     [Make movie backup/alternative?]
 
-  .notes
-    %p Demo
-    %p Permissiesysteem
+/   .notes
+/     %p
+/       %strong Demo
+/     %p
+/       %strong Permissiesysteem
 
 / Invitationsystem!
 #invite1.step{data_attr(x: -10000, y: -2000)}
@@ -666,43 +658,18 @@
       %small (Medewerkers, klanten, etc.)
       %ul.list
         %li Via e-mail
-    %li
-      Logica voor:
-      %ul.list
-        %li
-          %p Bestaande accounts
-          %small (Privacy en ontkoppeling)
-        %li Github gebruikers
-        %li
-          %p Teams
-          %small (Koppeling permissiesysteem)
     %li Geen Ruby-gem
 
   .notes
+    %strong Uitnodigingssysteem
     %ul
-      %li Doel: Toevoegen medewerkers aan het systeem
+      %li Doel: Toevoegen medewerkers
       %li Geen 1 persoon verantwoordelijk
+    %ul
       %li
         Uitnodigingen gaan via email
         %ul
           %li bevat link voor registratie en koppeling account
-    %ul
-      %li
-        Logica voor
-        %ul
-          %li
-            bestaande accounts
-            %ul
-              %li directe koppeling bij login
-              %li ontkoppeling van accounts
-          %li
-            Github gebruikers
-            %ul
-              %li koppeling bij login
-          %li
-            Teams
-            %ul
-              %li directe koppeling aan teams bij inloggen
     %ul
       %li
         Geen Ruby gem
@@ -716,12 +683,30 @@
     %small.right= link_to 'Open', 'images/invitationsystem.svg', 'target' => '_blank'
 
   .notes
-    Uitnodigingflow op scherm
+    %strong Uitnodigingflow op scherm
+
+    %ul
+      %li
+        Logica voor
+        %ul
+          %li
+            bestaande gebruikers
+            %ul
+              %li directe koppeling bij login
+          / %li
+          /   Github gebruikers
+          /   %ul
+          /     %li koppeling bij login
+          %li
+            Teams
+            %ul
+              %li directe koppeling aan teams bij inloggen
+              %li Koppeling permissiesysteem
 
 / Back to the scope
 #github-overview.step{data_attr(x: -9600, y: -4900, z: 400)}
   .notes
-    \-> Github-integratie
+    %strong -> Github-integratie
 
 / What to do for Github integration?
 #github1.step{data_attr(x: -10000, y: -3500)}
@@ -755,18 +740,18 @@
 
   %strong Toekomst:
   %ul.list
-    %li
-      %div Code links
-      %small
-        %em Bekijk de problematische code in AppSignal
+    / %li
+    /   %div Code links
+    /   %small
+    /     %em Bekijk de problematische code in AppSignal
     %li
       %div Code vergelijking
       %small
         %em Vergelijk problematische code met een vorige versie
-    %li
-      %div Teams import
-      %small
-        %em Makkelijkere opzet permissiesysteem voor klanten
+    / %li
+    /   %div Teams import
+    /   %small
+    /     %em Makkelijkere opzet permissiesysteem voor klanten
     %li
       %div Github issues aanmaken
       %small
@@ -785,23 +770,23 @@
             nodig voor de toekomst
     %p Toekomst:
     %ul
-      %li
-        Code links
-        %ul
-          %li openen code in AppSignal
+      / %li
+      /   Code links
+      /   %ul
+      /     %li openen code in AppSignal
       %li
         Code vergelijking
         %ul
           %li vergelijk vorige versies van de code in AppSignal
-      %li
-        Teams import
-        %ul
-          %li Importeren Github instellingen
-          %li Makkelijkere/sneller gebruik maken van AppSignal
+      / %li
+      /   Teams import
+      /   %ul
+      /     %li Importeren Github instellingen
+      /     %li Makkelijkere/sneller gebruik maken van AppSignal
       %li
         Github issues
         %ul
-          %li Aanmaken issues bij foutmeldingen
+          %li issues voor foutmeldingen
           %li AppSignal kan alle bruikbare informatie exporteren naar een Github issue
 
 / Back to the scope
@@ -818,6 +803,7 @@
   / TODO Vermelden web api en wijzigingen planning?
 
   .notes
+    %strong Planning
     %ul
       %li Projecten lopen altijd anders
     %ul
@@ -882,6 +868,49 @@
 
 / TODO Web API?
 
+/ Aanbevelingen
+#recommendations.step.big-slide{data_attr(x: -7000, y: -4900)}
+  %strong Aanbevelingen
+  %ul.list
+    / %li
+    /   %small (Permissiesysteem) CanCan gem + Mongoid gem =
+    /   %p Upgraden bij nieuwe CanCan release
+    %li
+      Beter notificatie management
+      %ul
+        %li
+          %img{src: '/images/white_check_mark.png', style: 'width: 40px;'}
+          Multi-email
+          %small per account
+        %li
+          %img{src: '/images/white_check_mark.png', style: 'width: 40px;'}
+          Notificaties uitzetten
+          %small per project
+    / %li
+    /   Uitnodigingen traceren
+
+  .notes
+    / %ul
+    /   %li CanCan upgrade
+    %ul
+      %li
+        %p Beter notificatie systeem
+        %ul
+          %li
+            %strong Multi-email
+            %ul
+              %li Per account een email instellen
+          %li
+            %strong Notificaties uitzetten
+            per project
+            %ul
+              %li geen overvolle mailbox
+    / %ul
+    /   %li
+    /     Uitnodigingen traceren
+    /     %ul
+    /       %li controle op aankomst
+
 / Wrapping up
 #conclusion-overview.step{data_attr(x: -10000, y: -4850, scale: 2)}
   .text.text-authsystem
@@ -901,16 +930,24 @@
       %li en alles online!
 
   .notes
+    %strong Conclusie
+    %ul
+      %li
+        Evaluatie
+        %ul
+          %li ging goed
+          %li ambitieuze planning
+          %li aanbevelingen
     %ul
       %li
         Gebruikerssysteem
         %ul
           %li Beveiliging
-          %li Delen van gegevens met medewerkers
+          %li Delen gegevens
       %li
         Github-integratie
         %ul
-          %li Verbeteren gebruikerservaring
+          %li Gebruikerservaring
     %ul
       %li
         Result
@@ -922,83 +959,6 @@
               %li zijn bewezen oplossingen voor problemen
           %li code is onderhoudbaar
           %li code is gedocumenteerd
-          %li
-            Alle afgeronde prodocten staan online
-    %ul
-      %li
-        Evaluatie
-        %ul
-          %li Ging goed
-          %li niet perfect
-          %li iets te ambitieuze planning
-          %li we werken nog aan de aanbevelingen
-
-/ TODO Evaluatie
-/ #evalutation.step.big-slide{data_attr(x: -5000, y: -4900)}
-/   %strong Evaluatie
-/   %p
-/     AppSignal test suite
-/     %small
-/       %small (not really)
-/   %p
-/     %small authsystem.should be_running
-/   %p
-/     %small github_authsystem.should be_running
-/   %p
-/     %small permissionsystem.should be_running
-/   %p
-/     %small invitationsystem.should be_running
-/   %p
-/     %small github_site_link.should be_up
-/   %p
-/     %small tom = beans.employees.find_by(name: 'Tom de Bruijn')
-/   %p
-/     %small tom.should be_working_on_recommendations
-
-/   %p Finished in 0.1337 seconds
-/   %p 6 examples, 0 failures
-
-/ Aanbevelingen
-#recommendations.step.big-slide{data_attr(x: -7000, y: -4900)}
-  %strong Aanbevelingen
-  %ul.list
-    %li
-      %small (Permissiesysteem) CanCan gem + Mongoid gem =
-      %p Upgraden bij nieuwe CanCan release
-    %li
-      Beter notificatie management
-      %ul
-        %li
-          %img{src: '/images/white_check_mark.png', style: 'width: 40px;'}
-          Multi-email
-          %small per account
-        %li
-          %img{src: '/images/white_check_mark.png', style: 'width: 40px;'}
-          Notificaties uitzetten
-          %small per project
-    %li
-      Uitnodigingen traceren
-
-  .notes
-    %ul
-      %li CanCan upgrade
-    %ul
-      %li
-        Beter notificatie systeem
-        %ul
-          %li
-            Multi-email
-            %ul
-              %li Per account een email instellen
-          %li
-            Notificaties uitzetten per project
-            %ul
-              %li geen overvolle mailbox
-    %ul
-      %li
-        Uitnodigingen traceren
-        %ul
-          %li controle op aankomst
 
 / Well thanks for hearing me ramble!
 #thanks.step.center{data_attr(x: -13500, y: -5000, z: 500, rotate: 90, 'rotate-y' => -70, scale: 5)}
