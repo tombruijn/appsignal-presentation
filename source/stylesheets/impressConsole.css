@@ -36,6 +36,11 @@ div#notes {
     height: 95%;
 }
 
+div#notes {
+  position: relative;
+  left: 420px;
+  width: 920px;
+}
 div#notes p {
     margin-top: 0;
 }
@@ -46,6 +51,8 @@ iframe#slideView {
 }
 
 iframe#preView {
+    position: absolute;
+    bottom: 80px;
     width: 16em;
     height: 10em;
 }

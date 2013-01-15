@@ -21,7 +21,7 @@
         '</head><body>' + 
         '<div id="console">' +
           '<div id="views">' +
-            '<iframe id="slideView" scrolling="no"></iframe>' +
+            //'<iframe id="slideView" scrolling="no"></iframe>' +
             '<iframe id="preView" scrolling="no"></iframe>' +
             '<div id="blocker"></div>' + 
           '</div>' +
@@ -95,9 +95,9 @@
                 var preSrc = baseURL + '#' + nextStep().id;
                 var slideView = consoleWindow.document.getElementById('slideView');
                 // Setting them when they are already set causes glithes in firexof, so we check first:
-                if (slideView.src !== slideSrc) {
-                    slideView.src = slideSrc;
-                }
+                // if (slideView.src !== slideSrc) {
+                //     slideView.src = slideSrc;
+                // }
                 var preView = consoleWindow.document.getElementById('preView');
                 if (preView.src !== preSrc) {
                     preView.src = preSrc;
